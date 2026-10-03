@@ -71,7 +71,9 @@ header.top { position: sticky; top: 0; z-index: 40; background: var(--header); b
   background: #0b0a08; box-shadow: inset 0 0 0 1.5px #e2b553, inset 0 0 0 4px #0b0a08, inset 0 0 0 5px rgba(226,181,83,.5); }
 .archbtn .slide { position: absolute; left: 0; right: 0; top: 0; transition: transform .5s cubic-bezier(.5, -0.3, .3, 1.3); }
 .archbtn .slide span { display: grid; place-items: center; height: 46px; padding-top: 6px; font: 700 12px/1 var(--body); letter-spacing: .14em; color: #f0cf7a; }
-.archbtn.es .slide { transform: translateY(-46px); }
+.archbtn[data-l="es"] .slide { transform: translateY(-46px); }
+.archbtn[data-l="ar"] .slide { transform: translateY(-92px); }
+.archbtn .slide span.arabic { font: 700 19px/1 "Reem Kufi", "Tajawal", serif; letter-spacing: 0; padding-top: 4px; }
 
 /* Theme: 8-point star, gold sun by day / silver moon by night */
 .starbtn { width: 46px; height: 46px; border: 0; background: none; padding: 0; cursor: pointer; flex: none; }
@@ -188,3 +190,24 @@ footer.foot { border-top: 1px solid var(--line); padding: 70px 0 120px; backgrou
   .js .rv { opacity: 1; transform: none; transition: none; }
   .archbtn .slide, .starbtn svg, .drawer { transition: none; }
 }
+
+/* ---- Arabic: right-to-left with Arabic type ---- */
+:root[lang="ar"] {
+  --display: "Reem Kufi", "Marcellus", serif;
+  --script: "Aref Ruqaa", "Reem Kufi", serif;
+  --body: "Tajawal", "Urbanist", system-ui, sans-serif;
+}
+/* Arabic has no capitals and must not be letter-spaced */
+:root[lang="ar"] .eyebrow, :root[lang="ar"] .menu-links a, :root[lang="ar"] .btn, :root[lang="ar"] .info h4,
+:root[lang="ar"] .foot-grid h4, :root[lang="ar"] .marquee .track { letter-spacing: 0; text-transform: none; }
+:root[lang="ar"] .menu-links a { font-size: 15.5px; }
+:root[lang="ar"] .btn { font-size: 15px; }
+:root[lang="ar"] .eyebrow { font-size: 14px; }
+:root[lang="ar"] body { line-height: 1.8; }
+:root[lang="ar"] h1, :root[lang="ar"] h2, :root[lang="ar"] h3 { line-height: 1.3; }
+[dir="rtl"] .menu-links a::after { left: 14px; right: 14px; }
+[dir="rtl"] .orn::before { transform: scaleX(-1); }
+[dir="rtl"] .orn::after { transform: none; }
+[dir="rtl"] .info > div + div { border-left: 0; border-right: 1px solid var(--line); }
+@media (max-width: 900px) { [dir="rtl"] .info > div + div { border-right: 0; } }
+bdi { unicode-bidi: isolate; }

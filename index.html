@@ -13,7 +13,7 @@
 <script>(function(){var t=null;try{t=localStorage.getItem("theme")}catch(e){}if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);if(t?t==="dark":!matchMedia("(prefers-color-scheme: light)").matches)document.documentElement.classList.add("dark");})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Pinyon+Script&family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Pinyon+Script&family=Urbanist:wght@400;500;600;700&family=Reem+Kufi:wght@400;500;600&family=Tajawal:wght@400;500;700&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <style>
   /* Hero */
@@ -99,6 +99,10 @@
     .arch .seal { left: -10px; width: 110px; height: 110px; }
   }
   @media (prefers-reduced-motion: reduce) { .ribbons path { animation: none; stroke-dashoffset: 0; } .arch .seal, .arch .seal span, .marquee .track { animation: none; } }
+  [dir="rtl"] .hero .facts div { border-left: 0; padding-left: 0; border-right: 1px solid var(--line); padding-right: 16px; }
+  [dir="rtl"] .arch .seal { left: auto; right: -38px; }
+  @media (max-width: 600px) { [dir="rtl"] .arch .seal { right: -10px; } }
+  [dir="rtl"] .marquee .track { direction: rtl; }
 </style>
 </head>
 <body data-page="home">
@@ -148,11 +152,11 @@
         <p data-i18n="sigLead">Six plates our regulars come back for. Mains are served with two sides of your choice.</p>
       </div>
       <div class="sig">
-        <article class="dish card rv"><div class="medal"><img src="images/hummus.webp" alt="" loading="lazy"></div><h3 data-i18n="d1t">Hummus</h3><p data-i18n="d1p">Silky, rich and made the way it should be. The one guests ask about first.</p><div class="price gold">$7.99</div></article>
+        <article class="dish card rv"><div class="medal"><img src="images/gallery/hummus.webp" alt="" loading="lazy"></div><h3 data-i18n="d1t">Hummus</h3><p data-i18n="d1p">Silky, rich and made the way it should be. The one guests ask about first.</p><div class="price gold">$7.99</div></article>
         <article class="dish card rv"><div class="medal"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 20 21 4"/><rect x="6" y="12" width="5" height="4" rx="1.5" transform="rotate(-42 8.5 14)"/><rect x="11" y="8" width="5" height="4" rx="1.5" transform="rotate(-42 13.5 10)"/></svg></div><h3 data-i18n="d2t">Shish Tawook</h3><p data-i18n="d2p">Chicken breast grilled with fragrant Indian spices and sauce.</p><div class="price gold">$19.99</div></article>
         <article class="dish card rv"><div class="medal"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M7 15c-3-1-4-5-1-7s6 0 7 3l6 6c1 1 1 3-1 3s-3-1-4-2z"/><path d="M15 3l-3 5"/></svg></div><h3 data-i18n="d3t">Lamb Chops</h3><p data-i18n="d3p">Char-grilled in a special mix of Turkish spices, with rice and fries.</p><div class="price gold">$23.99</div></article>
         <article class="dish card rv"><div class="medal"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><ellipse cx="12" cy="15" rx="9" ry="4"/><path d="M5 13l14-4M6 16l13-3.5"/></svg></div><h3 data-i18n="d4t">Mixed Grill Combo</h3><p data-i18n="d4p">A little of everything from the grill, for when you can't decide.</p><div class="price gold">$24.99</div></article>
-        <article class="dish card rv"><div class="medal"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 20 21 4"/><ellipse cx="9" cy="14" rx="4" ry="2" transform="rotate(-42 9 14)"/><ellipse cx="14" cy="9.5" rx="4" ry="2" transform="rotate(-42 14 9.5)"/></svg></div><h3 data-i18n="d5t">Kufta Kebab</h3><p data-i18n="d5p">Ground beef seasoned with special Halab spices, straight off the fire.</p><div class="price gold">$19.99</div></article>
+        <article class="dish card rv"><div class="medal"><img src="images/gallery/kufta.webp" alt="" loading="lazy"></div><h3 data-i18n="d5t">Kufta Kebab</h3><p data-i18n="d5p">Ground beef seasoned with special Halab spices, straight off the fire.</p><div class="price gold">$19.99</div></article>
         <article class="dish card rv"><div class="medal"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="9" width="18" height="9" rx="2"/><path d="M3 12c3 1 6-1 9 0s6 1 9 0M8 6c0-1 1-2 2-2M14 6c0-1 1-2 2-2"/></svg></div><h3 data-i18n="d6t">Kunafa</h3><p data-i18n="d6p">Warm, golden and sweet. The only way to end the night.</p><div class="price gold">$5.49</div></article>
       </div>
       <div class="center rv" style="margin-top:44px"><a class="btn btn-line" href="menu.html" data-i18n="fullMenu">See the full menu</a></div>
@@ -206,7 +210,7 @@
       <div class="info rv">
         <div><h4 data-i18n="iVisit">Visit</h4><p>201 S Greenville Ave, Suite 211</p><small>Richardson, TX 75081</small></div>
         <div><h4 data-i18n="iHours">Hours</h4><p data-i18n="iHoursP">Daily · 11:30 AM – 12:30 AM</p><small class="status" data-status><i></i><span></span></small></div>
-        <div><h4 data-i18n="iCall">Call or order</h4><p><a href="tel:+19725288570">(972) 528-8570</a></p><small><a href="https://zingmyorder.com/restaurants/sultan-cafe-201-s-greenville-ave-suite-211-richardson-tx-75081" target="_blank" rel="noopener" data-i18n="iOrder">Order online →</a></small></div>
+        <div><h4 data-i18n="iCall">Call or order</h4><p><a href="tel:+19725288570"><bdi dir="ltr">(972) 528-8570</bdi></a></p><small><a href="https://zingmyorder.com/restaurants/sultan-cafe-201-s-greenville-ave-suite-211-richardson-tx-75081" target="_blank" rel="noopener" data-i18n="iOrder">Order online →</a></small></div>
       </div>
     </div>
   </section>
@@ -235,7 +239,7 @@
     heroLead: "Cordero a la parrilla, shish tawook y kufta, hummus cremoso y kunafa caliente, servidos hasta tarde en un lounge hecho para quedarse.",
     ctaOrder: "Ordena para recoger o a domicilio", ctaMenu: "Ver el menú",
     f1: "Más de 425 reseñas", f2: "Abierto pasada la medianoche", f3: "Banquete para cinco",
-    altHummus: "Hummus con carne especiada y piñones tostados",
+    "alt:altHummus": "Hummus con carne especiada y piñones tostados",
     seal: "<b>Parrilla</b>hasta<br>tarde",
     sigEyebrow: "Favoritos de la casa", sigTitle: "De la parrilla del <span class=\"gold\">Sultán</span>",
     sigLead: "Seis platillos por los que nuestros clientes regresan. Los platos fuertes incluyen dos guarniciones a elegir.",
@@ -261,24 +265,79 @@
   };
   const DISHES = {
     en: ["Shish Tawook", "Lamb Chops", "Mixed Grill", "Kufta Kebab", "Beef Shawarma", "Falafel", "Fattoush", "Baklava", "Kunafa", "Hookah Lounge"],
-    es: ["Shish Tawook", "Chuletas de cordero", "Parrillada mixta", "Kufta Kebab", "Shawarma de res", "Falafel", "Fattoush", "Baklava", "Kunafa", "Hookah Lounge"]
+    es: ["Shish Tawook", "Chuletas de cordero", "Parrillada mixta", "Kufta Kebab", "Shawarma de res", "Falafel", "Fattoush", "Baklava", "Kunafa", "Hookah Lounge"],
+    ar: ["شيش طاووق", "ريش غنم", "مشاوي مشكلة", "كفتة كباب", "شاورما لحم", "فلافل", "فتوش", "بقلاوة", "كنافة", "صالة الأرجيلة"]
   };
   function marquee(l) {
     const row = DISHES[l].map(d => `<span>${d}</span>`).join("");
     document.getElementById("marquee").innerHTML = row + row;
   }
   document.addEventListener("langchange", e => marquee(e.detail));
+  window.PAGE_AR = {
+      "__title": "سلطان كافيه | مشويات متوسطية وصالة أرجيلة في ريتشاردسون، تكساس",
+      "__desc": "سلطان كافيه: مشويات متوسطية وصالة أرجيلة في قلب ريتشاردسون، تكساس. شيش طاووق، ريش غنم، مشاوي مشكلة، شاورما، حمص وكنافة. مفتوح حتى وقت متأخر.",
+      "welcome": "أهلاً بكم في سلطان",
+      "heroTitle": "طعم <span class=\"gold\">الشرق الأوسط</span> في قلب ريتشاردسون",
+      "heroLead": "لحم مشوي على الفحم، شيش طاووق وكفتة، حمص ناعم وكنافة دافئة، تُقدَّم حتى وقت متأخر في صالة مثالية للسهر.",
+      "ctaOrder": "اطلب للاستلام أو التوصيل",
+      "ctaMenu": "تصفّح القائمة",
+      "f1": "أكثر من 425 تقييمًا على Google",
+      "f2": "مفتوح بعد منتصف الليل",
+      "f3": "وليمة لخمسة أشخاص",
+      "alt:altHummus": "حمص مع لحم متبّل وصنوبر محمّص",
+      "seal": "<b>مشاوي</b>حتى<br>آخر الليل",
+      "sigEyebrow": "المفضّلة لدى زبائننا",
+      "sigTitle": "من مشاوي <span class=\"gold\">السلطان</span>",
+      "sigLead": "ستة أطباق يعود زبائننا من أجلها. تُقدَّم الأطباق الرئيسية مع طبقين جانبيين من اختيارك.",
+      "d1t": "حمص",
+      "d1p": "ناعم وغني ومحضّر كما يجب. أول ما يسأل عنه ضيوفنا.",
+      "d2t": "شيش طاووق",
+      "d2p": "صدر دجاج مشوي بتوابل هندية شهية وصلصة.",
+      "d3t": "ريش غنم",
+      "d3p": "مشوية على الفحم بخلطة خاصة من التوابل التركية، مع الأرز والبطاطا المقلية.",
+      "d4t": "مشاوي مشكلة",
+      "d4p": "القليل من كل شيء من المشواة، لمن يحتار في الاختيار.",
+      "d5t": "كفتة كباب",
+      "d5p": "لحم بقري مفروم متبّل ببهارات حلبية خاصة، طازج من على النار.",
+      "d6t": "كنافة",
+      "d6p": "دافئة وذهبية وحلوة. أجمل ختام للسهرة.",
+      "fullMenu": "شاهد القائمة كاملة",
+      "feastEyebrow": "اجمعوا العائلة",
+      "feastTitle": "<span class=\"gold\">وليمة</span> العائلة",
+      "feastLead": "مائدة عامرة لخمسة أشخاص، لأعياد الميلاد وسهرات المباريات والشهية الكبيرة.",
+      "feastServes": "لـ 5 أشخاص",
+      "feastInc": "على الطبق",
+      "fi1": "لحم غنم مشوي",
+      "fi2": "كفتة",
+      "fi3": "شيش طاووق",
+      "fi4": "حمص",
+      "fi5": "بابا غنوج",
+      "fi6": "فتوش",
+      "comboT": "طبق مشكّل لشخصين",
+      "comboS": "· نفس الأطباق المفضلة، بحجم يناسب شخصين",
+      "feastBtn": "اطلب الوليمة",
+      "loungeT": "صالة الأرجيلة",
+      "loungeP": "سلطان مطعم مشويات وصالة أرجيلة في مكان واحد. استرخِ بعد العشاء، واستمتع بالأحاديث الطيبة، وامتدّ بالسهرة إلى ما بعد منتصف الليل.",
+      "loungeNote": "مفتوح حتى 12:30 بعد منتصف الليل",
+      "cateringT": "الضيافة والمناسبات",
+      "cateringP": "غداء المكاتب والتجمعات العائلية والاحتفالات. انقل نكهات مشاوي السلطان إلى مائدتك.",
+      "cateringBtn": "اسأل عن خدمات الضيافة",
+      "iVisit": "زورونا",
+      "iHours": "ساعات العمل",
+      "iHoursP": "يوميًا · من 11:30 صباحًا حتى 12:30 ليلًا",
+      "iCall": "اتصل أو اطلب",
+      "iOrder": "اطلب أونلاين ←",
+      "bandScript": "أهلاً وسهلاً",
+      "bandTitle": "طاولتك بانتظارك",
+      "bandLead": "اطلب مسبقًا للاستلام أو التوصيل، أو تفضّل بزيارتنا واستمتع بوقتك.",
+      "bandOrder": "اطلب أونلاين",
+      "bandVisit": "خطّط لزيارتك"
+  };
 </script>
 <script src="site.js"></script>
 <script>
   marquee(window.SULTAN.lang());
-  // alt text i18n for the hero photo
-  (function () {
-    const img = document.querySelector('[data-i18n-alt="altHummus"]'), en = img.alt;
-    const set = l => { img.alt = l === "es" ? PAGE_ES.altHummus : en; };
-    set(window.SULTAN.lang());
-    document.addEventListener("langchange", e => set(e.detail));
-  })();
+
 </script>
 </body>
 </html>

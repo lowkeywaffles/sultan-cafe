@@ -10,7 +10,7 @@
 <script>(function(){var t=null;try{t=localStorage.getItem("theme")}catch(e){}if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);if(t?t==="dark":!matchMedia("(prefers-color-scheme: light)").matches)document.documentElement.classList.add("dark");})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Pinyon+Script&family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Pinyon+Script&family=Urbanist:wght@400;500;600;700&family=Reem+Kufi:wght@400;500;600&family=Tajawal:wght@400;500;700&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <style>
   .cards4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-bottom: 26px; }
@@ -40,6 +40,7 @@
   .err { color: #e4736b; font-size: 14px; }
   @media (max-width: 960px) { .cards4 { grid-template-columns: 1fr 1fr; } .formwrap { grid-template-columns: 1fr; } }
   @media (max-width: 560px) { .cards4, .two { grid-template-columns: 1fr; } form.card { padding: 26px 20px; } }
+  [dir="rtl"] input[type="tel"], [dir="rtl"] input[type="email"] { direction: ltr; text-align: right; }
 </style>
 </head>
 <body data-page="contact">
@@ -59,7 +60,7 @@
     <div class="wrap">
       <div class="cards4">
         <a class="ci card rv" href="https://www.google.com/maps/dir/?api=1&destination=201+S+Greenville+Ave+Suite+211+Richardson+TX+75081" target="_blank" rel="noopener"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h3 data-i18n="c1">Address</h3><p>201 S Greenville Ave, Suite 211</p><small>Richardson, TX 75081</small></a>
-        <a class="ci card rv" href="tel:+19725288570"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></div><h3 data-i18n="c2">Phone</h3><p>(972) 528-8570</p><small data-i18n="c2s">Call in your order</small></a>
+        <a class="ci card rv" href="tel:+19725288570"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></div><h3 data-i18n="c2">Phone</h3><p><bdi dir="ltr">(972) 528-8570</bdi></p><small data-i18n="c2s">Call in your order</small></a>
         <a class="ci card rv" href="mailto:hakeemrabah@gmail.com"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></div><h3 data-i18n="c3">Email</h3><p>hakeemrabah@gmail.com</p><small data-i18n="c3s">Catering &amp; events</small></a>
         <div class="ci card rv"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3 data-i18n="c4">Hours</h3><p data-i18n="c4p">Daily · 11:30 AM – 12:30 AM</p><small class="status" data-status><i></i><span></span></small></div>
       </div>
@@ -75,7 +76,7 @@
         <p data-i18n="fp">Planning an office lunch or a family celebration? Want to join the team? Send us a note and we'll get back to you as soon as we can.</p>
         <div class="perk" data-i18n="p1">Family Feast and combination platters for groups</div>
         <div class="perk" data-i18n="p2">We're hiring. Choose "Job application" below to apply</div>
-        <div class="perk" data-i18n="p3">Prefer to talk? Call (972) 528-8570</div>
+        <div class="perk" data-i18n="p3">Prefer to talk? Call <bdi dir="ltr">(972) 528-8570</bdi></div>
       </div>
       <form class="card rv" id="form" novalidate>
         <div class="two">
@@ -119,6 +120,39 @@
     l5: "Puesto que buscas", l6: "Años de experiencia", l7: "Mensaje", "ph:msgph": "Cuéntanos de tu evento, tu pregunta o de ti",
     send: "Enviar mensaje", note: "Al enviar se abrirá tu app de correo con tu mensaje listo. Para solicitudes de empleo, adjunta ahí tu currículum."
   };
+  window.PAGE_AR = {
+      "__title": "اتصل بنا | سلطان كافيه، ريتشاردسون تكساس",
+      "__desc": "زوروا سلطان كافيه في 201 S Greenville Ave, Suite 211، ريتشاردسون، تكساس 75081. اتصلوا على (972) 528-8570 أو راسلونا للضيافة والمناسبات. نحن نوظّف.",
+      "script": "أهلاً وسهلاً",
+      "title": "الزيارة والتواصل",
+      "lead": "في شارع ساوث غرينفيل في قلب ريتشاردسون. تعالَ للعشاء وابقَ في الصالة.",
+      "c1": "العنوان",
+      "c2": "الهاتف",
+      "c2s": "اتصل لتطلب",
+      "c3": "البريد الإلكتروني",
+      "c3s": "الضيافة والمناسبات",
+      "c4": "ساعات العمل",
+      "c4p": "يوميًا · من 11:30 صباحًا حتى 12:30 ليلًا",
+      "fe": "راسلنا",
+      "fh": "الضيافة، الاستفسارات، أو العمل معنا",
+      "fp": "تخطط لغداء في المكتب أو احتفال عائلي؟ تريد الانضمام إلى فريقنا؟ أرسل لنا رسالة وسنرد عليك في أقرب وقت.",
+      "p1": "وليمة العائلة والأطباق المشكّلة للمجموعات",
+      "p2": "نحن نوظّف. اختر \"طلب توظيف\" أدناه للتقديم",
+      "p3": "تفضّل الحديث؟ اتصل على <bdi dir=\"ltr\">(972) 528-8570</bdi>",
+      "l1": "الاسم",
+      "l2": "الهاتف",
+      "l3": "البريد الإلكتروني",
+      "l4": "الموضوع",
+      "o1": "استفسار عام",
+      "o2": "الضيافة والمناسبات",
+      "o3": "طلب توظيف",
+      "l5": "الوظيفة المطلوبة",
+      "l6": "سنوات الخبرة",
+      "l7": "الرسالة",
+      "ph:msgph": "حدّثنا عن مناسبتك أو سؤالك أو عن نفسك",
+      "send": "إرسال الرسالة",
+      "note": "عند الإرسال سيفتح تطبيق البريد لديك ورسالتك جاهزة. لطلبات التوظيف، أرفق سيرتك الذاتية هناك."
+  };
 </script>
 <script src="site.js"></script>
 <script>
@@ -134,9 +168,14 @@
     });
     form.addEventListener("submit", e => {
       e.preventDefault();
-      const f = form.elements, es = window.SULTAN.lang() === "es";
-      if (!f.name.value.trim()) { err.textContent = es ? "Escribe tu nombre." : "Please add your name."; err.hidden = false; f.name.focus(); return; }
-      if (!f.phone.value.trim() && !f.email.value.trim()) { err.textContent = es ? "Agrega un teléfono o correo para responderte." : "Add a phone or email so we can reply."; err.hidden = false; f.phone.focus(); return; }
+      const f = form.elements, l = window.SULTAN.lang();
+      const MSG = {
+        en: ["Please add your name.", "Add a phone or email so we can reply."],
+        es: ["Escribe tu nombre.", "Agrega un teléfono o correo para responderte."],
+        ar: ["يرجى كتابة اسمك.", "أضف رقم هاتف أو بريدًا إلكترونيًا حتى نتمكن من الرد."]
+      }[l];
+      if (!f.name.value.trim()) { err.textContent = MSG[0]; err.hidden = false; f.name.focus(); return; }
+      if (!f.phone.value.trim() && !f.email.value.trim()) { err.textContent = MSG[1]; err.hidden = false; f.phone.focus(); return; }
       err.hidden = true;
       const label = sub.options[sub.selectedIndex].text;
       const lines = ["Name: " + f.name.value.trim()];

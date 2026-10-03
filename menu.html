@@ -10,7 +10,7 @@
 <script>(function(){var t=null;try{t=localStorage.getItem("theme")}catch(e){}if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);if(t?t==="dark":!matchMedia("(prefers-color-scheme: light)").matches)document.documentElement.classList.add("dark");})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Pinyon+Script&family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Pinyon+Script&family=Urbanist:wght@400;500;600;700&family=Reem+Kufi:wght@400;500;600&family=Tajawal:wght@400;500;700&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <style>
   .tabs { position: sticky; top: 80px; z-index: 20; background: var(--header); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); transition: background-color .4s; }
@@ -45,6 +45,7 @@
   .order-cta { margin: 70px 0 110px; }
   @media (max-width: 860px) { .items, .family { grid-template-columns: 1fr; } }
   @media (max-width: 600px) { .tabs { top: 80px; } .fam { padding: 28px 22px; } }
+  [dir="rtl"] .item p { max-width: none; }
 </style>
 </head>
 <body data-page="menu">
@@ -73,7 +74,7 @@
       <div class="cat-head rv"><h2 data-i18n="t1">Appetizers</h2></div>
       <div class="grp rv"><h3 data-i18n="g_cold">Cold</h3>
         <div class="items">
-          <div class="item star"><div class="row1"><span class="nm">Hummus</span><span class="dots"></span><span class="pr gold">$7.99</span></div></div>
+          <div class="item star"><div class="row1"><span class="nm" data-i18n="n_hummus">Hummus</span><span class="dots"></span><span class="pr gold">$7.99</span></div></div>
           <div class="item"><div class="row1"><span class="nm" data-i18n="n_arabic">Arabic Salad</span><span class="dots"></span><span class="pr gold">$8.99</span></div></div>
           <div class="item"><div class="row1"><span class="nm" data-i18n="n_tabouli">Tabouli Salad</span><span class="dots"></span><span class="pr gold">$8.99</span></div></div>
           <div class="item"><div class="row1"><span class="nm" data-i18n="n_fattoush">Fattoush Salad</span><span class="dots"></span><span class="pr gold">$8.99</span></div></div>
@@ -90,7 +91,7 @@
       <div class="cat-head rv"><h2 data-i18n="t2">Sandwiches &amp; soup</h2><span class="note" data-i18n="sandNote">Served with French fries or salad on the side</span></div>
       <div class="grp rv">
         <div class="items">
-          <div class="item"><div class="row1"><span class="nm">Sultan Burger</span><span class="dots"></span><span class="pr gold">$9.99</span></div></div>
+          <div class="item"><div class="row1"><span class="nm" data-i18n="n_sburger">Sultan Burger</span><span class="dots"></span><span class="pr gold">$9.99</span></div></div>
           <div class="item"><div class="row1"><span class="nm" data-i18n="n_gcb">Grilled Chicken Burger</span><span class="dots"></span><span class="pr gold">$9.99</span></div></div>
           <div class="item"><div class="row1"><span class="nm" data-i18n="n_shishs">Shish Kebab Sandwich</span><span class="dots"></span><span class="pr gold">$9.99</span></div><p data-i18n="p_pita">On pita bread</p></div>
           <div class="item star"><div class="row1"><span class="nm" data-i18n="n_bshaw">Beef Shawarma Sandwich</span><span class="dots"></span><span class="pr gold">$9.99</span></div><p data-i18n="p_pita">On pita bread</p></div>
@@ -114,7 +115,7 @@
       <div class="cat-head rv"><h2 data-i18n="t3">Main dishes</h2><span class="note" data-i18n="mainNote">Served with two sides of your choice</span></div>
       <div class="grp rv">
         <div class="items">
-          <div class="item star"><div class="row1"><span class="nm">Shish Tawook</span><span class="dots"></span><span class="pr gold">$19.99</span></div><p data-i18n="p_tawook">Chicken breast grilled with delicious Indian spices and sauce</p></div>
+          <div class="item star"><div class="row1"><span class="nm" data-i18n="n_tawook">Shish Tawook</span><span class="dots"></span><span class="pr gold">$19.99</span></div><p data-i18n="p_tawook">Chicken breast grilled with delicious Indian spices and sauce</p></div>
           <div class="item"><div class="row1"><span class="nm" data-i18n="n_tilapia">Tilapia</span><span class="dots"></span><span class="pr gold">$20.99</span></div><p data-i18n="p_tilapia">Hand-chosen tilapia filet cooked in Sultan's specialty sauce</p></div>
           <div class="item"><div class="row1"><span class="nm" data-i18n="n_gcombo">Gyro &amp; Chicken Shawarma Combo</span><span class="dots"></span><span class="pr gold">$20.99</span></div></div>
           <div class="item"><div class="row1"><span class="nm" data-i18n="n_spch">Spicy Chicken</span><span class="dots"></span><span class="pr gold">$18.99</span></div></div>
@@ -143,7 +144,7 @@
       <div class="grp rv"><h3 data-i18n="g_des">Desserts</h3>
         <div class="items">
           <div class="item star"><div class="row1"><span class="nm" data-i18n="n_kunafa">Kunafa Plate</span><span class="dots"></span><span class="pr gold">$5.49</span></div></div>
-          <div class="item"><div class="row1"><span class="nm">Baklava</span><span class="dots"></span><span class="pr gold">$3.99</span></div></div>
+          <div class="item"><div class="row1"><span class="nm" data-i18n="n_baklava">Baklava</span><span class="dots"></span><span class="pr gold">$3.99</span></div></div>
           <div class="item"><div class="row1"><span class="nm" data-i18n="n_cheese">Royal Cheesecake</span><span class="dots"></span><span class="pr gold">$4.99</span></div></div>
         </div>
       </div>
@@ -159,7 +160,7 @@
       <div class="fade-lat lattice" aria-hidden="true"></div>
       <h2 data-i18n="ctaTitle">Hungry yet?</h2>
       <p data-i18n="ctaLead">Order ahead for pickup or delivery. Prices may change; the online order page always has today's menu.</p>
-      <div class="btns"><a class="btn btn-gold" href="https://zingmyorder.com/restaurants/sultan-cafe-201-s-greenville-ave-suite-211-richardson-tx-75081" target="_blank" rel="noopener" data-i18n="ctaBtn">Order online</a><a class="btn btn-line" href="tel:+19725288570">(972) 528-8570</a></div>
+      <div class="btns"><a class="btn btn-gold" href="https://zingmyorder.com/restaurants/sultan-cafe-201-s-greenville-ave-suite-211-richardson-tx-75081" target="_blank" rel="noopener" data-i18n="ctaBtn">Order online</a><a class="btn btn-line" href="tel:+19725288570"><bdi dir="ltr">(972) 528-8570</bdi></a></div>
     </div>
   </div>
 </main>
@@ -191,6 +192,76 @@
     f2who: "Para 2", f2t: "Plato Combinado", f2p: "Cordero a la parrilla, kofta, shish tawook, hummus, baba ganoush y fattoush.",
     n_kunafa: "Plato de kunafa", n_cheese: "Pastel de queso Royal", n_cblend: "Coctel Sultan · Licuado", n_cpieces: "Coctel Sultan · En trozos",
     ctaTitle: "¿Ya te dio hambre?", ctaLead: "Ordena con anticipación para recoger o a domicilio. Los precios pueden cambiar; la página de pedidos en línea siempre tiene el menú de hoy.", ctaBtn: "Ordenar en línea"
+  };
+  window.PAGE_AR = {
+      "__title": "القائمة | سلطان كافيه، ريتشاردسون تكساس",
+      "__desc": "قائمة سلطان كافيه كاملة: حمص، سلطات، سندويشات شاورما وكباب، شيش طاووق، ريش غنم، مشاوي مشكلة، أطباق عائلية، كنافة وبقلاوة، مع الأسعار.",
+      "title": "القائمة",
+      "lead": "مشوية على اللهب، متبّلة بالتوابل التركية والحلبية والهندية، ومُعدّة للمشاركة.",
+      "t1": "المقبلات",
+      "t2": "السندويشات والشوربة",
+      "t3": "الأطباق الرئيسية",
+      "t4": "الأطباق العائلية",
+      "t5": "الحلويات والمشروبات",
+      "g_cold": "باردة",
+      "g_hot": "ساخنة",
+      "g_soup": "الشوربة",
+      "g_des": "الحلويات",
+      "g_fruit": "كوكتيل الفواكه الطازجة",
+      "n_hummus": "حمص",
+      "n_arabic": "سلطة عربية",
+      "n_tabouli": "تبولة",
+      "n_fattoush": "فتوش",
+      "n_wings": "أجنحة حارة",
+      "p_wings": "5 قطع، تُقدَّم مع صلصة الرانش",
+      "sandNote": "تُقدَّم مع بطاطا مقلية أو سلطة",
+      "p_pita": "بخبز البيتا",
+      "n_sburger": "برغر سلطان",
+      "n_gcb": "برغر دجاج مشوي",
+      "n_shishs": "سندويش شيش كباب",
+      "n_bshaw": "سندويش شاورما لحم",
+      "n_cshaw": "سندويش شاورما دجاج",
+      "n_halloumi": "سندويش جبنة حلوم مقلية",
+      "n_gyros": "سندويش جيرو",
+      "n_kuftas": "سندويش كفتة",
+      "n_falafel": "سندويش فلافل",
+      "n_fish": "سندويش سمك",
+      "n_lentilb": "شوربة عدس · صحن",
+      "n_lentilc": "شوربة عدس · كوب",
+      "mainNote": "تُقدَّم مع طبقين جانبيين من اختيارك",
+      "n_tawook": "شيش طاووق",
+      "p_tawook": "صدر دجاج مشوي بتوابل هندية شهية وصلصة",
+      "n_tilapia": "سمك البلطي",
+      "p_tilapia": "فيليه بلطي مختار بعناية، مطهو بصلصة سلطان الخاصة",
+      "n_gcombo": "طبق جيرو وشاورما دجاج",
+      "n_spch": "دجاج حار",
+      "n_splamb": "لحم غنم حار",
+      "n_mixed": "مشاوي مشكلة",
+      "n_chops": "ريش غنم",
+      "p_chops": "مشوية على الفحم بخلطة خاصة من التوابل التركية، مع الأرز والبطاطا المقلية",
+      "n_lkabob": "شيش كباب لحم غنم",
+      "p_lkabob": "قطع لحم غنم طرية محضّرة بالبصل والسماق",
+      "n_kufta": "كفتة كباب",
+      "p_kufta": "لحم بقري مفروم مع بهارات حلبية خاصة",
+      "n_gplate": "طبق جيرو",
+      "n_cplate": "طبق شاورما دجاج",
+      "n_gchicken": "دجاج مشوي",
+      "p_gchicken": "يُقدَّم مع البطاطا المقلية والأرز",
+      "famNote": "للمشاركة",
+      "f1who": "لـ 5 أشخاص",
+      "f1t": "وليمة العائلة",
+      "f1p": "لحم غنم مشوي، كفتة، شيش طاووق، حمص، بابا غنوج وفتوش.",
+      "f2who": "لشخصين",
+      "f2t": "الطبق المشكّل",
+      "f2p": "لحم غنم مشوي، كفتة، شيش طاووق، حمص، بابا غنوج وفتوش.",
+      "n_kunafa": "طبق كنافة",
+      "n_baklava": "بقلاوة",
+      "n_cheese": "تشيز كيك رويال",
+      "n_cblend": "كوكتيل سلطان · مخفوق",
+      "n_cpieces": "كوكتيل سلطان · قطع",
+      "ctaTitle": "هل جعت؟",
+      "ctaLead": "اطلب مسبقًا للاستلام أو التوصيل. قد تتغير الأسعار، وصفحة الطلب أونلاين تعرض دائمًا قائمة اليوم.",
+      "ctaBtn": "اطلب أونلاين"
   };
 </script>
 <script src="site.js"></script>

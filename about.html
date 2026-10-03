@@ -10,7 +10,7 @@
 <script>(function(){var t=null;try{t=localStorage.getItem("theme")}catch(e){}if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);if(t?t==="dark":!matchMedia("(prefers-color-scheme: light)").matches)document.documentElement.classList.add("dark");})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Pinyon+Script&family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Pinyon+Script&family=Urbanist:wght@400;500;600;700&family=Reem+Kufi:wght@400;500;600&family=Tajawal:wght@400;500;700&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <style>
   .story { display: grid; grid-template-columns: .9fr 1.1fr; gap: 70px; align-items: center; }
@@ -36,6 +36,7 @@
   .val p { color: var(--soft); }
   @media (max-width: 960px) { .story { grid-template-columns: 1fr; gap: 40px; } .spices { grid-template-columns: 1fr 1fr; } .vals { grid-template-columns: 1fr; } }
   @media (max-width: 560px) { .spices { grid-template-columns: 1fr; } }
+  [dir="rtl"] .quote { border-left: 0; padding-left: 0; border-right: 2px solid var(--gold-2); padding-right: 24px; }
 </style>
 </head>
 <body data-page="about">
@@ -110,7 +111,7 @@
     __title: "Nosotros | Sultan Café, Richardson TX",
     __desc: "Sultan Café es una parrilla mediterránea y hookah bar en el corazón de Richardson, Texas, dedicada a un servicio excelente y platillos directos de Medio Oriente.",
     script: "Nuestra historia", title: "Directo de Medio Oriente", lead: "Una parrilla mediterránea y hookah bar en el corazón de Richardson, Texas.",
-    alt: "Hummus con carne especiada y piñones",
+    "alt:alt": "Hummus con carne especiada y piñones",
     e1: "Quiénes somos", h1: "Buena comida, servicio cálido y un lugar para quedarse",
     p1: "Sultan Café es una parrilla mediterránea y hookah bar en S Greenville Ave, justo en el corazón de Richardson. Nos dedicamos a dos cosas: un servicio excelente y comida que vale la pena repetir.",
     p2: "Si buscas el mejor hummus, gyros y tabulé de la ciudad, lo encontraste. Nuestro menú viene directo de Medio Oriente, con especialidades turcas, especias de Alepo y recetas que saben a casa.",
@@ -125,14 +126,46 @@
     v3t: "Hecho para reunirse", v3p: "Platos familiares, un hookah lounge relajado y horario hasta tarde, para que la noche no termine pronto.",
     bt: "Únete al equipo", bp: "Estamos contratando. Si te encanta la buena comida y la hospitalidad, queremos conocerte.", bb: "Aplica ahora"
   };
+  window.PAGE_AR = {
+      "__title": "من نحن | سلطان كافيه، ريتشاردسون تكساس",
+      "__desc": "سلطان كافيه مطعم مشويات متوسطية وصالة أرجيلة في قلب ريتشاردسون، تكساس، يلتزم بخدمة ممتازة وأطباق قادمة مباشرة من الشرق الأوسط.",
+      "script": "حكايتنا",
+      "title": "مباشرة من الشرق الأوسط",
+      "lead": "مطعم مشويات متوسطية وصالة أرجيلة في قلب ريتشاردسون، تكساس.",
+      "alt:alt": "حمص مع لحم متبّل وصنوبر",
+      "e1": "من نحن",
+      "h1": "طعام طيب وخدمة دافئة ومكان يحلو فيه البقاء",
+      "p1": "سلطان كافيه مطعم مشويات متوسطية وصالة أرجيلة في شارع ساوث غرينفيل، في قلب ريتشاردسون. نلتزم بأمرين: خدمة ممتازة وطعام يستحق العودة إليه.",
+      "p2": "إن كنت تبحث عن أفضل حمص وجيرو وتبولة في المدينة، فقد وجدته. قائمتنا قادمة مباشرة من الشرق الأوسط، بأطباق تركية مميزة وبهارات حلبية ووصفات بطعم البيت.",
+      "q": "تعال جائعًا، واسهر طويلًا، وارحل كأنك من العائلة.",
+      "btn": "تصفّح القائمة",
+      "e2": "طريق التوابل",
+      "h2": "لكل طبق <span class=\"gold\">حكاية</span>",
+      "l2": "التوابل التي تقف وراء أطباقنا المفضّلة، من أنحاء الشرق الأوسط وما وراءه.",
+      "s1": "التوابل التركية",
+      "s1d": "ريش الغنم",
+      "s1p": "خلطة خاصة تمنح ريش الغنم المشوية على الفحم عمق نكهتها.",
+      "s2": "البهارات الحلبية",
+      "s2d": "الكفتة والجيرو",
+      "s2p": "خلطة حلب الشهيرة، ممزوجة في كفتة اللحم المفروم.",
+      "s3": "التوابل الهندية",
+      "s3d": "شيش طاووق",
+      "s3p": "دافئة وعطرة، لصدر الدجاج المشوي مع صلصتنا.",
+      "s4": "السماق",
+      "s4d": "شيش كباب الغنم",
+      "s4p": "منعش وحامض، مع البصل لقطع لحم الغنم الطرية.",
+      "v1t": "خدمة ممتازة",
+      "v1p": "نستقبل كل ضيف كأنه من العائلة، سواء مررت لتناول سندويش أو بقيت طوال السهرة.",
+      "v2t": "نكهة أصيلة",
+      "v2p": "وصفات وتوابل مباشرة من الشرق الأوسط، تُشوى طازجة عند الطلب.",
+      "v3t": "مكان للّمّة",
+      "v3p": "أطباق عائلية، وصالة أرجيلة مريحة، وساعات عمل متأخرة، حتى لا تنتهي السهرة مبكرًا.",
+      "bt": "انضم إلى فريقنا",
+      "bp": "نحن نوظّف. إن كنت تحب الطعام الطيب وحسن الضيافة، نودّ التعرف إليك.",
+      "bb": "قدّم الآن"
+  };
 </script>
 <script src="site.js"></script>
-<script>
-  (function () {
-    const img = document.querySelector('[data-i18n-alt="alt"]'), en = img.alt;
-    const set = l => { img.alt = l === "es" ? PAGE_ES.alt : en; };
-    set(window.SULTAN.lang()); document.addEventListener("langchange", e => set(e.detail));
-  })();
-</script>
+
 </body>
 </html>
