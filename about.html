@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About | Sultan Café, Richardson TX</title>
+<meta name="description" content="Sultan Café is a Mediterranean grill and hookah bar in the heart of Richardson, Texas, dedicated to excellent service and dishes straight from the Middle East.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0a08'/%3E%3Cpath d='M32 6l7.5 9.5 11.5-2-2 11.5 9.5 7.5-9.5 7.5 2 11.5-11.5-2L32 58l-7.5-9.5-11.5 2 2-11.5L5.5 32l9.5-7.5-2-11.5 11.5 2z' fill='%23e2b553'/%3E%3Ccircle cx='32' cy='32' r='9' fill='%230b0a08'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#0b0a08">
+<script>(function(){var t=null;try{t=localStorage.getItem("theme")}catch(e){}if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);if(t?t==="dark":!matchMedia("(prefers-color-scheme: light)").matches)document.documentElement.classList.add("dark");})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Pinyon+Script&family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .story { display: grid; grid-template-columns: .9fr 1.1fr; gap: 70px; align-items: center; }
+  .story .pic { position: relative; aspect-ratio: .8; border-radius: 240px 240px 24px 24px; padding: 10px; background: var(--gold); max-width: 440px; width: 100%; justify-self: center; }
+  .story .pic > div { width: 100%; height: 100%; border-radius: 232px 232px 16px 16px; overflow: hidden; }
+  .story .pic img { width: 100%; height: 100%; object-fit: cover; }
+  .story h2 { font-size: clamp(38px, 4.8vw, 60px); margin-bottom: 20px; }
+  .story p { color: var(--soft); font-size: 17.5px; margin-bottom: 16px; }
+  .quote { font: 400 clamp(26px, 3vw, 36px)/1.35 var(--display); border-left: 2px solid var(--gold-2); padding-left: 24px; margin: 28px 0; color: var(--ink); }
+
+  .spices { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .spice { padding: 30px 26px; text-align: center; }
+  .spice .dot { width: 70px; height: 70px; border-radius: 50%; margin: 0 auto 18px; position: relative; box-shadow: inset 0 0 0 1px var(--line); }
+  .spice .dot::after { content: ""; position: absolute; inset: 8px; border-radius: 50%; border: 1px dashed rgba(255,255,255,.35); }
+  .spice h3 { font-size: 24px; margin-bottom: 6px; }
+  .spice .dish { font: 600 12px/1.3 var(--body); letter-spacing: .2em; text-transform: uppercase; color: var(--gold-text); margin-bottom: 10px; }
+  .spice p { color: var(--soft); font-size: 15px; }
+
+  .vals { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .val { padding: 40px 34px; }
+  .val .n { font: 400 54px/1 var(--display); margin-bottom: 14px; }
+  .val h3 { font-size: 26px; margin-bottom: 8px; }
+  .val p { color: var(--soft); }
+  @media (max-width: 960px) { .story { grid-template-columns: 1fr; gap: 40px; } .spices { grid-template-columns: 1fr 1fr; } .vals { grid-template-columns: 1fr; } }
+  @media (max-width: 560px) { .spices { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body data-page="about">
+<div id="site-header"></div>
+
+<main>
+  <div class="page-hero">
+    <div class="fade-lat lattice" aria-hidden="true"></div>
+    <div class="wrap">
+      <span class="script gold" style="font-size:48px;display:block" data-i18n="script">Our story</span>
+      <h1 data-i18n="title">Straight from the Middle East</h1>
+      <p data-i18n="lead">A Mediterranean grill and hookah bar in the heart of Richardson, Texas.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap story">
+      <div class="pic rv"><div><img src="images/hummus.webp" alt="Hummus with spiced beef and pine nuts" data-i18n-alt="alt"></div></div>
+      <div class="rv">
+        <span class="eyebrow" data-i18n="e1">Who we are</span>
+        <h2 data-i18n="h1">Good food, warm service and a place to linger</h2>
+        <p data-i18n="p1">Sultan Café is a Mediterranean grill and hookah bar on S Greenville Ave, right in the heart of Richardson. We're dedicated to two things: excellent service and food worth coming back for.</p>
+        <p data-i18n="p2">If you're searching for the best hummus, gyros and tabouli in town, you've found it. Our menu comes straight from the Middle East, with Turkish specialties, Halab spices and recipes that taste like home.</p>
+        <div class="quote" data-i18n="q">Come hungry, stay late, leave like family.</div>
+        <a class="btn btn-gold" href="menu.html" data-i18n="btn">Explore the menu</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec-alt">
+    <div class="wrap">
+      <div class="head center rv">
+        <span class="eyebrow" data-i18n="e2">The spice route</span>
+        <h2 data-i18n="h2">Every plate has a <span class="gold">story</span></h2>
+        <p data-i18n="l2">The spices behind our favorite dishes, from across the Middle East and beyond.</p>
+      </div>
+      <div class="spices">
+        <div class="spice card rv"><div class="dot" style="background:radial-gradient(circle at 35% 35%,#e8a23a,#a65a12)"></div><h3 data-i18n="s1">Turkish spices</h3><div class="dish" data-i18n="s1d">Lamb chops</div><p data-i18n="s1p">A special mix that gives our char-grilled lamb chops their depth.</p></div>
+        <div class="spice card rv"><div class="dot" style="background:radial-gradient(circle at 35% 35%,#c85a3a,#7a2512)"></div><h3 data-i18n="s2">Halab spices</h3><div class="dish" data-i18n="s2d">Kufta &amp; gyro</div><p data-i18n="s2p">Aleppo's signature blend, worked into our ground beef kufta.</p></div>
+        <div class="spice card rv"><div class="dot" style="background:radial-gradient(circle at 35% 35%,#f2c14e,#b97a14)"></div><h3 data-i18n="s3">Indian spices</h3><div class="dish" data-i18n="s3d">Shish tawook</div><p data-i18n="s3p">Warm and fragrant, for chicken breast grilled with our sauce.</p></div>
+        <div class="spice card rv"><div class="dot" style="background:radial-gradient(circle at 35% 35%,#a8323e,#5c1220)"></div><h3 data-i18n="s4">Sumac</h3><div class="dish" data-i18n="s4d">Lamb shish kabob</div><p data-i18n="s4p">Bright and tangy, paired with onion for our tender lamb chunks.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="vals">
+        <div class="val card rv"><div class="n gold">01</div><h3 data-i18n="v1t">Excellent service</h3><p data-i18n="v1p">Every guest is welcomed like family, whether you're stopping in for a sandwich or staying all night.</p></div>
+        <div class="val card rv"><div class="n gold">02</div><h3 data-i18n="v2t">Authentic flavor</h3><p data-i18n="v2p">Recipes and spices straight from the Middle East, grilled fresh to order.</p></div>
+        <div class="val card rv"><div class="n gold">03</div><h3 data-i18n="v3t">Made for gathering</h3><p data-i18n="v3p">Family platters, a relaxed hookah lounge and late hours, so the night never has to end early.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="band rv">
+        <div class="fade-lat lattice" aria-hidden="true"></div>
+        <h2 data-i18n="bt">Join the team</h2>
+        <p data-i18n="bp">We're hiring. If you love great food and great hospitality, we'd like to meet you.</p>
+        <div class="btns"><a class="btn btn-gold" href="contact.html#apply" data-i18n="bb">Apply now</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script>
+  window.PAGE_ES = {
+    __title: "Nosotros | Sultan Café, Richardson TX",
+    __desc: "Sultan Café es una parrilla mediterránea y hookah bar en el corazón de Richardson, Texas, dedicada a un servicio excelente y platillos directos de Medio Oriente.",
+    script: "Nuestra historia", title: "Directo de Medio Oriente", lead: "Una parrilla mediterránea y hookah bar en el corazón de Richardson, Texas.",
+    alt: "Hummus con carne especiada y piñones",
+    e1: "Quiénes somos", h1: "Buena comida, servicio cálido y un lugar para quedarse",
+    p1: "Sultan Café es una parrilla mediterránea y hookah bar en S Greenville Ave, justo en el corazón de Richardson. Nos dedicamos a dos cosas: un servicio excelente y comida que vale la pena repetir.",
+    p2: "Si buscas el mejor hummus, gyros y tabulé de la ciudad, lo encontraste. Nuestro menú viene directo de Medio Oriente, con especialidades turcas, especias de Alepo y recetas que saben a casa.",
+    q: "Ven con hambre, quédate hasta tarde, vete como familia.", btn: "Ver el menú",
+    e2: "La ruta de las especias", h2: "Cada plato tiene una <span class=\"gold\">historia</span>", l2: "Las especias detrás de nuestros platillos favoritos, de todo Medio Oriente y más allá.",
+    s1: "Especias turcas", s1d: "Chuletas de cordero", s1p: "Una mezcla especial que da profundidad a nuestras chuletas de cordero a la parrilla.",
+    s2: "Especias de Alepo", s2d: "Kufta y gyro", s2p: "La mezcla característica de Alepo, en nuestra kufta de carne molida.",
+    s3: "Especias indias", s3d: "Shish tawook", s3p: "Cálidas y aromáticas, para la pechuga de pollo a la parrilla con nuestra salsa.",
+    s4: "Sumac", s4d: "Brocheta de cordero", s4p: "Brillante y ácido, con cebolla para nuestros tiernos trozos de cordero.",
+    v1t: "Servicio excelente", v1p: "Cada invitado es recibido como familia, ya sea que pases por un sándwich o te quedes toda la noche.",
+    v2t: "Sabor auténtico", v2p: "Recetas y especias directas de Medio Oriente, a la parrilla y al momento.",
+    v3t: "Hecho para reunirse", v3p: "Platos familiares, un hookah lounge relajado y horario hasta tarde, para que la noche no termine pronto.",
+    bt: "Únete al equipo", bp: "Estamos contratando. Si te encanta la buena comida y la hospitalidad, queremos conocerte.", bb: "Aplica ahora"
+  };
+</script>
+<script src="site.js"></script>
+<script>
+  (function () {
+    const img = document.querySelector('[data-i18n-alt="alt"]'), en = img.alt;
+    const set = l => { img.alt = l === "es" ? PAGE_ES.alt : en; };
+    set(window.SULTAN.lang()); document.addEventListener("langchange", e => set(e.detail));
+  })();
+</script>
+</body>
+</html>

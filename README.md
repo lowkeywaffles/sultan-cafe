@@ -1,16 +1,18 @@
-# Sultan Cafe: website demo (upgrade pitch)
+# Sultan Café: website redesign demo
 
-Upgrade demo for Sultan Cafe, 201 S Greenville Ave #211, Richardson, TX 75081 · (972) 528-8570.
-They already have a working Zingmyorder template site (sultancafe.us); this demo shows a custom, branded alternative and links to their existing online ordering.
+A multi-page redesign of sultancafe.us in Sultan Café's own black-and-gold brand, for 201 S Greenville Ave #211, Richardson, TX 75081 · (972) 528-8570.
 
-- Single static page (`index.html`), English/Spanish (`?lang=es`).
-- Arched-window language switch, mosaic-star light/dark switch, late-night open/closed status (handles after-midnight hours).
-- Pitch angle: their old domain sultantexas.com, still listed in directories, now redirects to a gambling spam site.
+Pages: `index.html` (home), `menu.html` (full menu with prices), `about.html`, `gallery.html`, `contact.html`.
+Shared: `style.css`, `site.js` (header/footer, EN/ES, light/dark, open-now status, scroll reveals), `images/logo.png`, `images/hummus.webp`.
+
+- English/Spanish (`?lang=es`), arched-window language switch, 8-point-star theme switch.
+- Links to their existing Zingmyorder online ordering.
+- Gallery: add photos to `images/gallery/` and list them in the `GALLERY` array in `gallery.html`.
 
 ## Needed before going live
-- [ ] Sunday hours (not listed) and confirm Mon–Thu 11–1, Fri–Sat 11–2
-- [ ] Which phone to show: (972) 528-8570 or (972) 235-7900
-- [ ] Do they offer hookah? (Yelp lists them as a hookah bar; their own site doesn't mention it)
-- [ ] Food photos (they have some on sultancafe.us; get permission to reuse)
-- [ ] Prices to show, or keep sending people to online ordering
-- [ ] Would they add an Arabic version?
+- [ ] **Gallery photos** (food, lounge, desserts)
+- [ ] Hours: their site says 11:30 AM–12:30 AM; directories say until 1 AM weeknights / 2 AM weekends
+- [ ] Correct descriptions for Mixed Grill Combo and Gyro Plate (their current site repeats other dishes' text)
+- [ ] OK to show the hookah lounge prominently? Any hookah menu/pricing?
+- [ ] Higher-resolution logo file (current one is cut from a screenshot)
+- [ ] Which email should receive contact/catering/job messages (currently hakeemrabah@gmail.com)

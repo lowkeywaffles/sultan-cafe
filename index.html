@@ -3,376 +3,282 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sultan Cafe | Mediterranean Grill in Richardson, TX · Open Late</title>
-<meta name="description" content="Shawarma, shish tawook, lamb chops, mixed grill, falafel, kunafa and more at Sultan Cafe, 201 S Greenville Ave #211, Richardson, TX. Open late. Order online or call (972) 528-8570.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231c3f8f'/%3E%3Cpath d='M32 8l7 9 11-2-2 11 9 7-9 7 2 11-11-2-7 9-7-9-11 2 2-11-9-7 9-7-2-11 11 2z' fill='%23f4b942'/%3E%3Ccircle cx='32' cy='33' r='8' fill='%231c3f8f'/%3E%3C/svg%3E">
-<meta name="theme-color" content="#f6f8fb" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0b1328" media="(prefers-color-scheme: dark)">
-<script>
-  (function () {
-    var t = null;
-    try { t = localStorage.getItem("theme"); } catch (e) {}
-    if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
-    if (t ? t === "dark" : matchMedia("(prefers-color-scheme: dark)").matches) document.documentElement.classList.add("dark");
-  })();
-</script>
+<title>Sultan Café | Mediterranean Grill &amp; Hookah Lounge in Richardson, TX</title>
+<meta name="description" content="Sultan Café: Mediterranean grill and hookah lounge in the heart of Richardson, TX. Shish tawook, lamb chops, mixed grill, shawarma, hummus and kunafa. Open late. Order pickup or delivery, or call (972) 528-8570.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0a08'/%3E%3Cpath d='M32 6l7.5 9.5 11.5-2-2 11.5 9.5 7.5-9.5 7.5 2 11.5-11.5-2L32 58l-7.5-9.5-11.5 2 2-11.5L5.5 32l9.5-7.5-2-11.5 11.5 2z' fill='%23e2b553'/%3E%3Ccircle cx='32' cy='32' r='9' fill='%230b0a08'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#0b0a08">
+<meta property="og:title" content="Sultan Café · Richardson, TX">
+<meta property="og:description" content="Mediterranean grill & hookah lounge. Open late.">
+<meta property="og:image" content="images/logo.png">
+<script>(function(){var t=null;try{t=localStorage.getItem("theme")}catch(e){}if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);if(t?t==="dark":!matchMedia("(prefers-color-scheme: light)").matches)document.documentElement.classList.add("dark");})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Albert+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Pinyon+Script&family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 <style>
-  /* Iznik tiles: cobalt, turquoise and pomegranate on white glaze; dark mode is a night over the old city */
-  :root {
-    color-scheme: light;
-    --bg: #f6f8fb; --bg-alt: #edf1f8; --card: #ffffff; --ink: #121b33; --soft: #576079; --line: #dbe2ef;
-    --cobalt: #1c3f8f; --cobalt-text: #1c3f8f; --turq: #1aa6a0; --pom: #c8343c; --pom-text: #b52a33; --saffron: #f4b942;
-    --btn: #c8343c; --btn-h: #a9272f; --btn-fg: #ffffff; --tint: #e4ebf8; --header: rgba(246, 248, 251, .88);
-    --shadow: rgba(18, 27, 51, .18); --map: none; --pattern: rgba(28, 63, 143, .07);
-  }
-  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
-    color-scheme: dark;
-    --bg: #0b1328; --bg-alt: #0f1932; --card: #142041; --ink: #eef2fb; --soft: #a4aec8; --line: #24335d;
-    --cobalt-text: #8fb1ff; --pom-text: #ff7e85; --btn: #f4b942; --btn-h: #f7c96a; --btn-fg: #1e1400;
-    --tint: #1c2b52; --header: rgba(11, 19, 40, .86); --shadow: rgba(0, 0, 0, .6); --map: invert(.9) hue-rotate(180deg) saturate(.5);
-    --pattern: rgba(143, 177, 255, .06);
-  } }
-  :root[data-theme="dark"] {
-    color-scheme: dark;
-    --bg: #0b1328; --bg-alt: #0f1932; --card: #142041; --ink: #eef2fb; --soft: #a4aec8; --line: #24335d;
-    --cobalt-text: #8fb1ff; --pom-text: #ff7e85; --btn: #f4b942; --btn-h: #f7c96a; --btn-fg: #1e1400;
-    --tint: #1c2b52; --header: rgba(11, 19, 40, .86); --shadow: rgba(0, 0, 0, .6); --map: invert(.9) hue-rotate(180deg) saturate(.5);
-    --pattern: rgba(143, 177, 255, .06);
-  }
-  /* Theme change: an arch-shaped reveal, like stepping through a doorway */
-  ::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
-  ::view-transition-new(root) { animation: arch .7s cubic-bezier(.6,0,.3,1); }
-  @keyframes arch { from { clip-path: inset(100% 45% 0 45% round 50% 50% 0 0); } to { clip-path: inset(0 0 0 0 round 0); } }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body { font-family: "Albert Sans", system-ui, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; -webkit-font-smoothing: antialiased; }
-  a { color: inherit; }
-  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
-  h1, h2, h3 { font-family: "Rozha One", Georgia, serif; font-weight: 400; line-height: 1.04; letter-spacing: -.005em; text-wrap: balance; }
-  .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: var(--pom-text); margin-bottom: 12px; }
-  .eyebrow::before { content: "✦"; color: var(--saffron); letter-spacing: 0; }
-  /* 8-point star tile pattern */
-  .tile-bg { background-image:
-      conic-gradient(from 22.5deg at 50% 50%, var(--pattern) 0 12.5%, transparent 0 25%, var(--pattern) 0 37.5%, transparent 0 50%, var(--pattern) 0 62.5%, transparent 0 75%, var(--pattern) 0 87.5%, transparent 0),
-      radial-gradient(circle at 50% 50%, transparent 0 9px, var(--pattern) 10px 11px, transparent 12px);
-    background-size: 48px 48px; }
-
-  header { position: sticky; top: 0; z-index: 20; background: var(--header); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
-  .nav { height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex: none; }
-  .logo b { display: block; font: 400 28px/1 "Rozha One", serif; color: var(--cobalt-text); }
-  .logo small { display: block; font-size: 11px; font-weight: 800; letter-spacing: .16em; color: var(--soft); text-transform: uppercase; }
-  .links { display: flex; align-items: center; gap: 20px; font-size: 15px; }
-  .links > a:not(.btn) { text-decoration: none; color: var(--soft); font-weight: 700; }
-  .links > a:not(.btn):hover { color: var(--ink); }
-
-  /* Language: an arched window; the other language slides into view */
-  .archbtn { position: relative; width: 52px; height: 46px; border: 0; padding: 0; cursor: pointer; flex: none; overflow: hidden;
-    border-radius: 26px 26px 6px 6px; background: #1c3f8f; box-shadow: inset 0 0 0 3px #f4b942; }
-  .archbtn .slide { position: absolute; left: 0; right: 0; top: 0; transition: transform .45s cubic-bezier(.5,-0.3,.3,1.3); }
-  .archbtn .slide span { display: grid; place-items: center; height: 46px; font: 800 13px/1 "Albert Sans", sans-serif; color: #fff; letter-spacing: .08em; padding-top: 6px; }
-  .archbtn.es .slide { transform: translateY(-46px); }
-
-  /* Theme: an 8-point mosaic star; sun-gold by day, moon-silver by night */
-  .star { width: 46px; height: 46px; border: 0; padding: 0; background: none; cursor: pointer; flex: none; }
-  .star svg { width: 100%; height: 100%; transition: transform .7s cubic-bezier(.4,1.5,.5,1); }
-  .star .pt { fill: #f4b942; transition: fill .4s; }
-  .star .core { fill: #c8343c; transition: fill .4s; }
-  .dark .star svg { transform: rotate(135deg); }
-  .dark .star .pt { fill: #c9d6f2; }
-  .dark .star .core { fill: #1c3f8f; }
-  .archbtn:focus-visible, .star:focus-visible, .btn:focus-visible { outline: 3px solid var(--turq); outline-offset: 3px; border-radius: 12px; }
-
-  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 24px; border-radius: 999px; font-weight: 800; font-size: 15px; text-decoration: none; border: 0; cursor: pointer; transition: transform .15s, background .15s; }
-  .btn:hover { transform: translateY(-1px); }
-  .btn-p { background: var(--btn); color: var(--btn-fg); }
-  .btn-p:hover { background: var(--btn-h); }
-  .btn-g { background: var(--card); color: var(--ink); border: 1px solid var(--line); }
-  .links .btn { padding: 10px 16px; }
-  body, header, .menu-col, .hours, details, .btn-g, .feast { transition: background-color .4s, border-color .4s, color .4s; }
-
   /* Hero */
-  .hero { padding: 56px 0 80px; position: relative; overflow: hidden; }
-  .hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 40px; align-items: center; }
-  .status { display: inline-flex; align-items: center; gap: 8px; background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px 6px 10px; font-size: 14px; font-weight: 700; margin-bottom: 20px; }
-  .status i { width: 9px; height: 9px; border-radius: 50%; background: #9aa4bb; }
-  .status.open i { background: #22a35a; box-shadow: 0 0 0 4px rgba(34,163,90,.2); }
-  .hero h1 { font-size: clamp(52px, 7.4vw, 96px); margin-bottom: 18px; }
-  .hero h1 span { color: var(--pom-text); }
-  .lead { font-size: 18px; color: var(--soft); max-width: 500px; margin-bottom: 28px; }
-  .ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 26px; }
-  .late { display: inline-flex; align-items: center; gap: 12px; padding: 12px 18px; border-radius: 16px; background: var(--cobalt); color: #fff; }
-  .dark .late { background: #1c2b52; }
-  .late b { font: 400 26px/1 "Rozha One", serif; color: #f4b942; }
-  .late span { font-size: 14px; opacity: .85; }
+  .hero { padding: 70px 0 90px; position: relative; overflow: hidden; isolation: isolate; }
+  .hero .fade-lat { z-index: -1; }
+  .ribbons { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+  .ribbons path { fill: none; stroke: url(#ribbon); stroke-width: 2; stroke-dasharray: 2400; stroke-dashoffset: 2400; animation: draw 4.5s cubic-bezier(.5,0,.2,1) .2s forwards; }
+  .ribbons path + path { animation-delay: .7s; stroke-width: 1.2; opacity: .6; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  .hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 50px; align-items: center; }
+  .hero .welcome { font-size: clamp(38px, 4.6vw, 58px); color: var(--gold-text); line-height: 1; display: block; margin-bottom: 4px; }
+  .hero h1 { font-size: clamp(46px, 6.2vw, 86px); margin-bottom: 22px; }
+  .hero .lead { font-size: 18.5px; color: var(--soft); max-width: 520px; margin-bottom: 32px; }
+  .hero .ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 34px; }
+  .hero .facts { display: flex; flex-wrap: wrap; gap: 26px; }
+  .hero .facts div { border-left: 1px solid var(--line); padding-left: 16px; }
+  .hero .facts b { display: block; font: 400 30px/1 var(--display); }
+  .hero .facts span { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--soft); }
 
-  .portal { position: relative; aspect-ratio: .82; max-width: 440px; width: 100%; justify-self: center; border-radius: 220px 220px 24px 24px; overflow: hidden;
-    background: #1c3f8f; box-shadow: inset 0 0 0 10px #f4b942, inset 0 0 0 14px #1c3f8f, inset 0 0 0 17px #1aa6a0, 0 40px 80px -40px var(--shadow); }
-  .portal .tiles { position: absolute; inset: 17px; border-radius: 210px 210px 14px 14px; --pattern: rgba(255,255,255,.1); }
-  .portal svg { position: absolute; left: 50%; bottom: 8%; width: 82%; transform: translateX(-50%); }
-  .portal .rot { transform-origin: 50% 50%; animation: turn 60s linear infinite; }
-  @keyframes turn { to { transform: rotate(360deg); } }
-  @media (prefers-reduced-motion: reduce) { .portal .rot { animation: none; } .star svg, .archbtn .slide { transition: none; } }
+  .arch { position: relative; width: 100%; max-width: 440px; justify-self: center; aspect-ratio: .78; }
+  .arch .frame { position: absolute; inset: 0; border-radius: 220px 220px 26px 26px; padding: 10px; background: var(--gold); box-shadow: 0 50px 90px -40px rgba(0,0,0,.8); }
+  .arch .frame > div { width: 100%; height: 100%; border-radius: 212px 212px 18px 18px; overflow: hidden; background: #0b0a08; border: 3px solid #0b0a08; }
+  .arch img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.05); transition: transform 8s ease; }
+  .arch:hover img { transform: scale(1.12); }
+  .arch .seal { position: absolute; left: -38px; bottom: 60px; width: 132px; height: 132px; display: grid; place-items: center; text-align: center; color: #1a1205; animation: spin 26s linear infinite; }
+  .arch .seal svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .arch .seal span { position: relative; font: 400 15px/1.1 var(--display); letter-spacing: .06em; animation: spin 26s linear infinite reverse; }
+  .arch .seal b { display: block; font-size: 26px; }
+  @keyframes spin { to { transform: rotate(360deg); } }
 
-  section { padding: 90px 0; }
-  .alt { background: var(--bg-alt); }
-  .head { max-width: 640px; margin-bottom: 40px; }
-  .head h2 { font-size: clamp(40px, 5.4vw, 62px); margin-bottom: 12px; }
-  .head p { color: var(--soft); font-size: 17px; }
+  .marquee { border-block: 1px solid var(--line); overflow: hidden; padding: 20px 0; background: var(--bg-2); }
+  .marquee .track { display: inline-flex; gap: 40px; white-space: nowrap; animation: slide 40s linear infinite; font: 400 22px/1 var(--display); letter-spacing: .14em; text-transform: uppercase; }
+  .marquee .track span { display: inline-flex; align-items: center; gap: 40px; }
+  .marquee .track span::after { content: "✦"; color: var(--gold-text); font-size: 14px; }
+  @keyframes slide { to { transform: translateX(-50%); } }
 
-  .menu { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-  .menu-col { background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: 28px; position: relative; overflow: hidden; }
-  .menu-col::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 6px; background: linear-gradient(90deg, var(--cobalt-text), var(--turq), var(--saffron), var(--pom)); }
-  .menu-col h3 { font-size: 30px; margin-bottom: 14px; }
-  .menu-col ul { list-style: none; }
-  .menu-col li { padding: 9px 0; border-bottom: 1px dashed var(--line); font-weight: 600; display: flex; align-items: baseline; gap: 10px; }
-  .menu-col li:last-child { border-bottom: 0; }
-  .menu-col li::before { content: ""; width: 7px; height: 7px; flex: none; transform: rotate(45deg) translateY(-2px); background: var(--turq); }
-  .menu-col li small { color: var(--soft); font-weight: 500; }
+  /* Signature dishes as arched cards */
+  .sig { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .dish { position: relative; padding: 34px 30px 30px; border-radius: 160px 160px 24px 24px; text-align: center; overflow: hidden; }
+  .dish::before { content: ""; position: absolute; inset: 8px; border: 1px solid var(--line); border-radius: 152px 152px 18px 18px; pointer-events: none; }
+  .dish:hover { transform: translateY(-6px); box-shadow: 0 30px 60px -36px var(--shadow); border-color: var(--gold-3); }
+  .dish .medal { width: 92px; height: 92px; margin: 18px auto 18px; border-radius: 50%; display: grid; place-items: center; background: var(--panel-2); box-shadow: inset 0 0 0 1px var(--line); color: var(--gold-text); position: relative; }
+  .dish .medal { overflow: hidden; }
+  .dish .medal img { position: absolute; inset: 0; width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+  .dish h3 { font-size: 26px; margin-bottom: 8px; }
+  .dish p { color: var(--soft); font-size: 15px; margin-bottom: 16px; min-height: 48px; }
+  .dish .price { font: 400 24px/1 var(--display); }
 
-  .feast { margin-top: 18px; display: grid; grid-template-columns: auto 1fr auto; gap: 24px; align-items: center; background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: 26px 30px; }
-  .feast .badge { width: 74px; height: 74px; border-radius: 50%; background: var(--saffron); color: #1e1400; display: grid; place-items: center; text-align: center; font: 800 12px/1.05 "Albert Sans", sans-serif; }
-  .feast .badge b { display: block; font: 400 28px/1 "Rozha One", serif; }
-  .feast h3 { font-size: 30px; }
-  .feast p { color: var(--soft); }
+  /* Family feast */
+  .feast { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-radius: 32px; overflow: hidden; border: 1px solid var(--line); }
+  .feast .l { position: relative; background: #0b0a08; color: #f4ead6; padding: 60px 54px; overflow: hidden; }
+  .feast .l .fade-lat { opacity: .9; }
+  .feast .l > *:not(.fade-lat) { position: relative; }
+  .feast .l h2 { font-size: clamp(40px, 5vw, 64px); margin-bottom: 12px; }
+  .feast .l p { color: #bcae92; margin-bottom: 26px; }
+  .feast .big { font: 400 64px/1 var(--display); }
+  .feast .big small { font: 600 14px/1 var(--body); letter-spacing: .2em; text-transform: uppercase; color: #bcae92; margin-left: 10px; }
+  .feast .r { background: var(--panel); padding: 54px; display: grid; gap: 22px; align-content: center; }
+  .feast ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 20px; }
+  .feast li { display: flex; gap: 10px; align-items: center; font-size: 16px; }
+  .feast li::before { content: "✦"; color: var(--gold-text); font-size: 12px; }
+  .feast .combo { border-top: 1px solid var(--line); padding-top: 20px; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .feast .combo b { font: 400 24px/1.2 var(--display); }
+  .feast .combo span { color: var(--soft); }
 
-  .visit { display: grid; grid-template-columns: .9fr 1.1fr; gap: 22px; }
-  .hours { background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: 30px; display: grid; gap: 16px; align-content: start; }
-  .hours h3 { font-size: 32px; }
-  table { width: 100%; border-collapse: collapse; font-size: 15px; }
-  td { padding: 9px 0; border-bottom: 1px dashed var(--line); }
-  td:last-child { text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; }
-  tr.today td { color: var(--pom-text); font-weight: 800; }
-  .row { display: flex; gap: 12px; align-items: flex-start; text-decoration: none; }
-  .row .ic { width: 40px; height: 40px; border-radius: 12px; background: var(--tint); color: var(--cobalt-text); display: grid; place-items: center; flex: none; }
-  .row strong { display: block; } .row span { color: var(--soft); font-size: 14px; }
-  .map { border-radius: 22px; overflow: hidden; border: 1px solid var(--line); min-height: 420px; background: var(--tint); }
-  .map iframe { width: 100%; height: 100%; min-height: 420px; border: 0; display: block; filter: var(--map); }
+  /* Lounge + catering */
+  .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .duo .card { padding: 44px; position: relative; overflow: hidden; }
+  .duo .card .ic { width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; background: var(--panel-2); box-shadow: inset 0 0 0 1px var(--line); color: var(--gold-text); margin-bottom: 22px; }
+  .duo h3 { font-size: 36px; margin-bottom: 10px; }
+  .duo p { color: var(--soft); margin-bottom: 22px; }
+  .duo .note { font-size: 14px; color: var(--gold-text); letter-spacing: .04em; }
 
-  .faq { max-width: 800px; }
-  details { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px 22px; margin-bottom: 10px; }
-  summary { cursor: pointer; font-weight: 800; font-size: 17px; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
-  summary::-webkit-details-marker { display: none; }
-  summary::after { content: "+"; font-size: 22px; line-height: 1; color: var(--pom-text); transition: transform .25s; }
-  details[open] summary::after { transform: rotate(45deg); }
-  details p { margin-top: 8px; color: var(--soft); }
-
-  .cta { background: #1c3f8f; color: #fff; border-radius: 28px; padding: 56px; display: flex; justify-content: space-between; align-items: center; gap: 24px; position: relative; overflow: hidden; }
-  .cta .tiles { position: absolute; inset: 0; --pattern: rgba(255,255,255,.08); }
-  .cta > *:not(.tiles) { position: relative; }
-  .cta h2 { font-size: clamp(38px, 5vw, 60px); }
-  .cta h2 span { color: #f4b942; }
-  .cta .ctas { margin: 0; }
-  .cta .btn-p { background: #f4b942; color: #1e1400; }
-  .cta .btn-g { background: transparent; color: #fff; border-color: rgba(255,255,255,.4); }
-
-  footer { padding: 34px 0 110px; color: var(--soft); font-size: 14px; }
-  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; border-top: 1px solid var(--line); padding-top: 24px; }
-  .callbar { display: none; position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 30; gap: 10px; }
-  .callbar .btn { flex: 1; justify-content: center; box-shadow: 0 10px 30px -8px var(--shadow); }
-
-  @media (max-width: 960px) {
-    .hero-grid, .visit { grid-template-columns: 1fr; }
-    .menu { grid-template-columns: 1fr 1fr; }
-    .links > a:not(.btn) { display: none; }
-    .portal { max-width: 340px; }
-    .feast { grid-template-columns: auto 1fr; }
-    .feast .btn { grid-column: 1 / -1; justify-self: start; }
-    .cta { flex-direction: column; align-items: flex-start; padding: 40px 28px; }
+  @media (max-width: 1020px) {
+    .hero-grid, .feast, .duo { grid-template-columns: 1fr; }
+    .sig { grid-template-columns: 1fr 1fr; }
+    .arch { max-width: 360px; }
   }
   @media (max-width: 600px) {
-    .wrap { padding: 0 16px; }
-    section { padding: 62px 0; }
-    .menu { grid-template-columns: 1fr; }
-    .links .btn { display: none; }
-    .logo small { display: none; }
-    .callbar { display: flex; }
-    .feast { grid-template-columns: 1fr; }
+    .sig { grid-template-columns: 1fr; }
+    .feast .l, .feast .r, .duo .card { padding: 36px 26px; }
+    .feast ul { grid-template-columns: 1fr; }
+    .arch .seal { left: -10px; width: 110px; height: 110px; }
   }
+  @media (prefers-reduced-motion: reduce) { .ribbons path { animation: none; stroke-dashoffset: 0; } .arch .seal, .arch .seal span, .marquee .track { animation: none; } }
 </style>
 </head>
-<body>
-<header>
-  <div class="wrap nav">
-    <a class="logo" href="#top" aria-label="Sultan Cafe"><svg width="40" height="40" viewBox="0 0 64 64"><path d="M32 4l8 10 12-2-2 12 10 8-10 8 2 12-12-2-8 10-8-10-12 2 2-12-10-8 10-8-2-12 12 2z" fill="#f4b942"/><circle cx="32" cy="32" r="10" fill="#1c3f8f"/></svg><span><b>Sultan Cafe</b><small data-i18n="logoSub">Mediterranean grill · Richardson</small></span></a>
-    <nav class="links">
-      <a href="#menu" data-i18n="navMenu">Menu</a>
-      <a href="#visit" data-i18n="navVisit">Hours</a>
-      <button type="button" class="archbtn" id="archbtn" aria-label="Cambiar a español"><span class="slide"><span>EN</span><span>ES</span></span></button>
-      <button type="button" class="star" id="star" aria-label="Toggle dark mode"><svg viewBox="0 0 64 64" aria-hidden="true"><path class="pt" d="M32 4l8 10 12-2-2 12 10 8-10 8 2 12-12-2-8 10-8-10-12 2 2-12-10-8 10-8-2-12 12 2z"/><circle class="core" cx="32" cy="32" r="9"/></svg></button>
-      <a class="btn btn-p" href="https://zingmyorder.com/restaurants/sultan-cafe-201-s-greenville-ave-suite-211-richardson-tx-75081" target="_blank" rel="noopener" data-i18n="navOrder">Order online</a>
-    </nav>
-  </div>
-</header>
+<body data-page="home">
+<div id="site-header"></div>
 
-<main id="top">
-  <section class="hero tile-bg">
+<main>
+  <section class="hero">
+    <div class="fade-lat lattice" aria-hidden="true"></div>
+    <svg class="ribbons" viewBox="0 0 1400 800" preserveAspectRatio="none" aria-hidden="true">
+      <defs><linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#a8781f" stop-opacity="0"/><stop offset=".3" stop-color="#e2b553"/><stop offset=".6" stop-color="#fbe7a1"/><stop offset="1" stop-color="#a8781f" stop-opacity="0"/></linearGradient></defs>
+      <path d="M-50 640 C 260 520, 420 760, 720 600 S 1160 300, 1460 420"/>
+      <path d="M-50 690 C 300 580, 460 800, 760 650 S 1180 360, 1460 470"/>
+    </svg>
     <div class="wrap hero-grid">
-      <div>
-        <div class="status" id="status"><i></i><span id="status-text"></span></div>
-        <h1 data-i18n="heroTitle">Off the grill, <span>open late.</span></h1>
-        <p class="lead" data-i18n="heroLead">Shawarma, shish tawook, lamb chops and mixed grill, fresh salads and warm kunafa. Mediterranean comfort food with Turkish specialties on S Greenville Ave in Richardson.</p>
+      <div class="rv">
+        <span class="script welcome" data-i18n="welcome">Welcome to Sultan</span>
+        <h1 data-i18n="heroTitle">A taste of the <span class="gold">Middle East</span> in the heart of Richardson</h1>
+        <p class="lead" data-i18n="heroLead">Char-grilled lamb, shish tawook and kufta, silky hummus and warm kunafa, served late in a lounge made for lingering.</p>
         <div class="ctas">
-          <a class="btn btn-p" href="https://zingmyorder.com/restaurants/sultan-cafe-201-s-greenville-ave-suite-211-richardson-tx-75081" target="_blank" rel="noopener" data-i18n="ctaOrder">Order for pickup or delivery</a>
-          <a class="btn btn-g" href="tel:+19725288570" data-i18n="ctaCall">Call (972) 528-8570</a>
+          <a class="btn btn-gold" href="https://zingmyorder.com/restaurants/sultan-cafe-201-s-greenville-ave-suite-211-richardson-tx-75081" target="_blank" rel="noopener" data-i18n="ctaOrder">Order pickup or delivery</a>
+          <a class="btn btn-line" href="menu.html" data-i18n="ctaMenu">Explore the menu</a>
         </div>
-        <div class="late"><b data-i18n="lateB">Till 2 AM</b><span data-i18n="lateS">Fridays &amp; Saturdays · till 1 AM weeknights</span></div>
-      </div>
-      <div class="portal" aria-hidden="true">
-        <div class="tiles tile-bg"></div>
-        <svg viewBox="0 0 300 300">
-          <g class="rot"><path d="M150 20l32 40 50-8-8 50 40 32-40 32 8 50-50-8-32 40-32-40-50 8 8-50-40-32 40-32-8-50 50 8z" fill="none" stroke="#f4b942" stroke-width="3" opacity=".7"/></g>
-          <!-- skewer platter -->
-          <ellipse cx="150" cy="200" rx="120" ry="44" fill="#f6f8fb"/>
-          <ellipse cx="150" cy="196" rx="104" ry="34" fill="#1aa6a0" opacity=".25"/>
-          <path d="M50 186l200-20" stroke="#8a7a5c" stroke-width="4" stroke-linecap="round"/>
-          <g><rect x="76" y="168" width="26" height="22" rx="8" fill="#8a4a24"/><rect x="104" y="166" width="18" height="20" rx="6" fill="#c8343c"/><rect x="124" y="160" width="26" height="22" rx="8" fill="#8a4a24"/><rect x="152" y="160" width="16" height="18" rx="6" fill="#f4b942"/><rect x="170" y="154" width="26" height="22" rx="8" fill="#8a4a24"/><rect x="198" y="154" width="18" height="18" rx="6" fill="#3f8a3a"/></g>
-          <path d="M60 214l190-20" stroke="#8a7a5c" stroke-width="4" stroke-linecap="round"/>
-          <g><rect x="84" y="196" width="28" height="20" rx="9" fill="#d9a35a"/><rect x="116" y="192" width="28" height="20" rx="9" fill="#d9a35a"/><rect x="148" y="188" width="28" height="20" rx="9" fill="#d9a35a"/><rect x="180" y="184" width="28" height="20" rx="9" fill="#d9a35a"/></g>
-          <g fill="#3f8a3a"><circle cx="70" cy="214" r="7"/><circle cx="234" cy="196" r="7"/><circle cx="222" cy="214" r="5"/></g>
-          <circle cx="96" cy="232" r="10" fill="#c8343c"/><circle cx="210" cy="226" r="8" fill="#f6e3c0"/>
-        </svg>
-      </div>
-    </div>
-  </section>
-
-  <section id="menu" class="alt">
-    <div class="wrap">
-      <div class="head"><span class="eyebrow" data-i18n="menuEyebrow">The menu</span><h2 data-i18n="menuTitle">Grilled, fresh and made to share</h2><p data-i18n="menuLead">A taste of what's on the menu. Mains come with two sides; sandwiches with fries or salad.</p></div>
-      <div class="menu">
-        <div class="menu-col"><h3 data-i18n="g1">Starters &amp; salads</h3><ul><li>Hummus</li><li data-i18n="i_arabic">Arabic salad</li><li>Tabouli</li><li>Fattoush</li><li data-i18n="i_lentil">Lentil soup</li><li data-i18n="i_wings">Hot wings</li></ul></div>
-        <div class="menu-col"><h3 data-i18n="g2">From the grill</h3><ul><li>Shish tawook</li><li data-i18n="i_mixed">Mixed grill combo</li><li data-i18n="i_lamb">Lamb chops</li><li data-i18n="i_lambkabob">Lamb shish kabob</li><li data-i18n="i_kufta">Kufta kebab</li><li data-i18n="i_tilapia">Tilapia</li></ul></div>
-        <div class="menu-col"><h3 data-i18n="g3">Wraps &amp; sweets</h3><ul><li data-i18n="i_shawarma">Beef or chicken shawarma</li><li>Falafel</li><li>Gyro</li><li data-i18n="i_halloumi">Fried halloumi</li><li data-i18n="i_kunafa">Kunafa <small>· warm &amp; cheesy</small></li><li data-i18n="i_baklava">Baklava</li></ul></div>
-      </div>
-      <div class="feast">
-        <div class="badge"><span><b>5</b><span data-i18n="feastPpl">people</span></span></div>
-        <div><h3 data-i18n="feastT">The Family Feast</h3><p data-i18n="feastP">Grilled lamb, chicken and kufta skewers with sides, made for up to five. There's also a Combination Plate for two.</p></div>
-        <a class="btn btn-p" href="https://zingmyorder.com/restaurants/sultan-cafe-201-s-greenville-ave-suite-211-richardson-tx-75081" target="_blank" rel="noopener" data-i18n="feastBtn">Order the feast</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="visit">
-    <div class="wrap">
-      <div class="head"><span class="eyebrow" data-i18n="visitEyebrow">Visit</span><h2 data-i18n="visitTitle">S Greenville Ave, Suite 211</h2></div>
-      <div class="visit">
-        <div class="hours">
-          <h3 data-i18n="hoursTitle">Hours</h3>
-          <table><tbody id="hours"></tbody></table>
-          <a class="row" href="tel:+19725288570"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span><strong>(972) 528-8570</strong><span data-i18n="callSub">Call in your order</span></span></a>
-          <a class="row" href="https://www.google.com/maps/dir/?api=1&destination=201+S+Greenville+Ave+211+Richardson+TX+75081" target="_blank" rel="noopener"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span><strong>201 S Greenville Ave #211</strong><span>Richardson, TX 75081</span></span></a>
+        <div class="facts">
+          <div><b class="gold">4.2★</b><span data-i18n="f1">425+ Google reviews</span></div>
+          <div><b class="gold">12:30</b><span data-i18n="f2">Open past midnight</span></div>
+          <div><b class="gold">5</b><span data-i18n="f3">Feast for five</span></div>
         </div>
-        <div class="map"><iframe id="map" title="Map" loading="lazy" src="https://maps.google.com/maps?q=201+S+Greenville+Ave+211,+Richardson,+TX+75081&z=15&output=embed"></iframe></div>
+      </div>
+      <div class="arch rv">
+        <div class="frame"><div><img src="images/hummus.webp" alt="Hummus topped with spiced beef and toasted pine nuts" data-i18n-alt="altHummus"></div></div>
+        <div class="seal" aria-hidden="true">
+          <svg viewBox="0 0 64 64"><path d="M32 2l9 11 14-2-2 14 11 9-11 9 2 14-14-2-9 11-9-11-14 2 2-14L2 32l11-9-2-14 14 2z" fill="url(#goldgrad)"/></svg>
+          <span data-i18n="seal"><b>Late</b>night<br>grill</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="alt">
+  <div class="marquee" aria-hidden="true"><div class="track" id="marquee"></div></div>
+
+  <section>
     <div class="wrap">
-      <div class="head"><span class="eyebrow" data-i18n="faqEyebrow">Questions</span><h2 data-i18n="faqTitle">Good to know</h2></div>
-      <div class="faq">
-        <details open><summary data-i18n="q1">Can I order online?</summary><p data-i18n="a1">Yes. Order online for pickup or delivery, or call (972) 528-8570.</p></details>
-        <details><summary data-i18n="q2">How late are you open?</summary><p data-i18n="a2">Until 1 AM Monday to Thursday and until 2 AM on Fridays and Saturdays.</p></details>
-        <details><summary data-i18n="q3">Do you have vegetarian options?</summary><p data-i18n="a3">Yes: hummus, tabouli, fattoush, Arabic salad, lentil soup, falafel and fried halloumi.</p></details>
-        <details><summary data-i18n="q4">Can you feed a group?</summary><p data-i18n="a4">The Family Feast serves up to five, and the Combination Plate serves two.</p></details>
+      <div class="head center rv">
+        <div class="orn"><svg viewBox="0 0 64 64" fill="currentColor"><path d="M32 4l8 10 12-2-2 12 10 8-10 8 2 12-12-2-8 10-8-10-12 2 2-12-10-8 10-8-2-12 12 2z"/></svg></div>
+        <span class="eyebrow" data-i18n="sigEyebrow">House favorites</span>
+        <h2 data-i18n="sigTitle">From the <span class="gold">Sultan's</span> grill</h2>
+        <p data-i18n="sigLead">Six plates our regulars come back for. Mains are served with two sides of your choice.</p>
+      </div>
+      <div class="sig">
+        <article class="dish card rv"><div class="medal"><img src="images/hummus.webp" alt="" loading="lazy"></div><h3 data-i18n="d1t">Hummus</h3><p data-i18n="d1p">Silky, rich and made the way it should be. The one guests ask about first.</p><div class="price gold">$7.99</div></article>
+        <article class="dish card rv"><div class="medal"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 20 21 4"/><rect x="6" y="12" width="5" height="4" rx="1.5" transform="rotate(-42 8.5 14)"/><rect x="11" y="8" width="5" height="4" rx="1.5" transform="rotate(-42 13.5 10)"/></svg></div><h3 data-i18n="d2t">Shish Tawook</h3><p data-i18n="d2p">Chicken breast grilled with fragrant Indian spices and sauce.</p><div class="price gold">$19.99</div></article>
+        <article class="dish card rv"><div class="medal"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M7 15c-3-1-4-5-1-7s6 0 7 3l6 6c1 1 1 3-1 3s-3-1-4-2z"/><path d="M15 3l-3 5"/></svg></div><h3 data-i18n="d3t">Lamb Chops</h3><p data-i18n="d3p">Char-grilled in a special mix of Turkish spices, with rice and fries.</p><div class="price gold">$23.99</div></article>
+        <article class="dish card rv"><div class="medal"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><ellipse cx="12" cy="15" rx="9" ry="4"/><path d="M5 13l14-4M6 16l13-3.5"/></svg></div><h3 data-i18n="d4t">Mixed Grill Combo</h3><p data-i18n="d4p">A little of everything from the grill, for when you can't decide.</p><div class="price gold">$24.99</div></article>
+        <article class="dish card rv"><div class="medal"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 20 21 4"/><ellipse cx="9" cy="14" rx="4" ry="2" transform="rotate(-42 9 14)"/><ellipse cx="14" cy="9.5" rx="4" ry="2" transform="rotate(-42 14 9.5)"/></svg></div><h3 data-i18n="d5t">Kufta Kebab</h3><p data-i18n="d5p">Ground beef seasoned with special Halab spices, straight off the fire.</p><div class="price gold">$19.99</div></article>
+        <article class="dish card rv"><div class="medal"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="9" width="18" height="9" rx="2"/><path d="M3 12c3 1 6-1 9 0s6 1 9 0M8 6c0-1 1-2 2-2M14 6c0-1 1-2 2-2"/></svg></div><h3 data-i18n="d6t">Kunafa</h3><p data-i18n="d6p">Warm, golden and sweet. The only way to end the night.</p><div class="price gold">$5.49</div></article>
+      </div>
+      <div class="center rv" style="margin-top:44px"><a class="btn btn-line" href="menu.html" data-i18n="fullMenu">See the full menu</a></div>
+    </div>
+  </section>
+
+  <section class="sec-alt">
+    <div class="wrap">
+      <div class="feast rv">
+        <div class="l">
+          <div class="fade-lat lattice" aria-hidden="true"></div>
+          <span class="eyebrow" data-i18n="feastEyebrow">Bring the family</span>
+          <h2 data-i18n="feastTitle">The Family <span class="gold">Feast</span></h2>
+          <p data-i18n="feastLead">A grand spread for five, built for birthdays, game nights and big appetites.</p>
+          <div class="big gold">$103.99<small data-i18n="feastServes">serves 5</small></div>
+        </div>
+        <div class="r">
+          <span class="eyebrow" data-i18n="feastInc">On the platter</span>
+          <ul>
+            <li data-i18n="fi1">Grilled lamb</li><li data-i18n="fi2">Kofta</li><li data-i18n="fi3">Shish tawook</li>
+            <li data-i18n="fi4">Hummus</li><li data-i18n="fi5">Baba ghanoush</li><li data-i18n="fi6">Fattoush</li>
+          </ul>
+          <div class="combo"><b data-i18n="comboT">Combination Plate for two</b><span><span class="gold" style="font:400 24px/1 var(--display)">$61.99</span> <span data-i18n="comboS">· same favorites, sized for two</span></span></div>
+          <a class="btn btn-gold" href="https://zingmyorder.com/restaurants/sultan-cafe-201-s-greenville-ave-suite-211-richardson-tx-75081" target="_blank" rel="noopener" data-i18n="feastBtn">Order the feast</a>
+        </div>
       </div>
     </div>
   </section>
 
   <section>
     <div class="wrap">
-      <div class="cta"><div class="tiles tile-bg"></div><h2 data-i18n="ctaTitle">Hungry? <span>We're still open.</span></h2><div class="ctas"><a class="btn btn-p" href="https://zingmyorder.com/restaurants/sultan-cafe-201-s-greenville-ave-suite-211-richardson-tx-75081" target="_blank" rel="noopener" data-i18n="ctaOrder2">Order online</a><a class="btn btn-g" href="tel:+19725288570">(972) 528-8570</a></div></div>
+      <div class="duo">
+        <div class="card rv">
+          <div class="ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2c1 2-1 3 0 5M9 3c1 2-1 3 0 5M15 3c1 2-1 3 0 5"/><path d="M8 10h8l-1 4h-6z"/><path d="M10 14v4M14 14v4M7 21h10M12 18v3"/></svg></div>
+          <h3 data-i18n="loungeT">The hookah lounge</h3>
+          <p data-i18n="loungeP">Sultan is a grill and a hookah lounge in one. Settle in after dinner, stay for good conversation, and keep the night going well past midnight.</p>
+          <span class="note" data-i18n="loungeNote">Open until 12:30 AM</span>
+        </div>
+        <div class="card rv">
+          <div class="ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 18h18M5 18a7 7 0 0 1 14 0M12 8V6M10 6h4"/></svg></div>
+          <h3 data-i18n="cateringT">Catering &amp; events</h3>
+          <p data-i18n="cateringP">Office lunches, family gatherings and celebrations. Bring the flavors of the Sultan's grill to your table.</p>
+          <a class="btn btn-line" href="contact.html" data-i18n="cateringBtn">Ask about catering</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec-alt">
+    <div class="wrap">
+      <div class="info rv">
+        <div><h4 data-i18n="iVisit">Visit</h4><p>201 S Greenville Ave, Suite 211</p><small>Richardson, TX 75081</small></div>
+        <div><h4 data-i18n="iHours">Hours</h4><p data-i18n="iHoursP">Daily · 11:30 AM – 12:30 AM</p><small class="status" data-status><i></i><span></span></small></div>
+        <div><h4 data-i18n="iCall">Call or order</h4><p><a href="tel:+19725288570">(972) 528-8570</a></p><small><a href="https://zingmyorder.com/restaurants/sultan-cafe-201-s-greenville-ave-suite-211-richardson-tx-75081" target="_blank" rel="noopener" data-i18n="iOrder">Order online →</a></small></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="band rv">
+        <div class="fade-lat lattice" aria-hidden="true"></div>
+        <span class="script gold" style="font-size:44px;display:block;margin-bottom:6px" data-i18n="bandScript">Ahlan wa sahlan</span>
+        <h2 data-i18n="bandTitle">Your table is waiting</h2>
+        <p data-i18n="bandLead">Order ahead for pickup or delivery, or come by and stay a while.</p>
+        <div class="btns"><a class="btn btn-gold" href="https://zingmyorder.com/restaurants/sultan-cafe-201-s-greenville-ave-suite-211-richardson-tx-75081" target="_blank" rel="noopener" data-i18n="bandOrder">Order online</a><a class="btn btn-line" href="contact.html" data-i18n="bandVisit">Plan your visit</a></div>
+      </div>
     </div>
   </section>
 </main>
 
-<footer><div class="wrap"><span>© <span id="yr"></span> Sultan Cafe · 201 S Greenville Ave #211, Richardson, TX 75081</span><a href="tel:+19725288570">(972) 528-8570</a></div></footer>
-<div class="callbar"><a class="btn btn-p" href="https://zingmyorder.com/restaurants/sultan-cafe-201-s-greenville-ave-suite-211-richardson-tx-75081" target="_blank" rel="noopener" data-i18n="barOrder">Order</a><a class="btn btn-g" href="tel:+19725288570" data-i18n="barCall">Call</a></div>
+<div id="site-footer"></div>
 
 <script>
-  const ES = {
-    title: "Sultan Cafe | Parrilla mediterránea en Richardson, TX · Abierto tarde",
-    desc: "Shawarma, shish tawook, chuletas de cordero, parrillada mixta, falafel, kunafa y más en Sultan Cafe, 201 S Greenville Ave #211, Richardson, TX. Abierto hasta tarde. Ordena en línea o llama al (972) 528-8570.",
-    logoSub: "Parrilla mediterránea · Richardson", navMenu: "Menú", navVisit: "Horario", navOrder: "Ordenar en línea",
-    heroTitle: "De la parrilla, <span>abierto hasta tarde.</span>",
-    heroLead: "Shawarma, shish tawook, chuletas de cordero y parrillada mixta, ensaladas frescas y kunafa caliente. Comida mediterránea con especialidades turcas en S Greenville Ave en Richardson.",
-    ctaOrder: "Ordena para recoger o a domicilio", ctaCall: "Llama al (972) 528-8570",
-    lateB: "Hasta las 2 AM", lateS: "Viernes y sábados · hasta la 1 AM entre semana",
-    menuEyebrow: "El menú", menuTitle: "A la parrilla, fresco y para compartir", menuLead: "Una muestra del menú. Los platos fuertes incluyen dos guarniciones; los sándwiches, papas o ensalada.",
-    g1: "Entradas y ensaladas", i_arabic: "Ensalada árabe", i_lentil: "Sopa de lentejas", i_wings: "Alitas picantes",
-    g2: "De la parrilla", i_mixed: "Parrillada mixta", i_lamb: "Chuletas de cordero", i_lambkabob: "Brocheta de cordero", i_kufta: "Kebab de kufta", i_tilapia: "Tilapia",
-    g3: "Wraps y postres", i_shawarma: "Shawarma de res o pollo", i_halloumi: "Queso halloumi frito", i_kunafa: "Kunafa <small>· caliente y con queso</small>", i_baklava: "Baklava",
-    feastPpl: "personas", feastT: "El Banquete Familiar", feastP: "Brochetas de cordero, pollo y kufta a la parrilla con guarniciones, para hasta cinco personas. También hay un Plato Combinado para dos.", feastBtn: "Ordena el banquete",
-    visitEyebrow: "Visítanos", visitTitle: "S Greenville Ave, local 211", hoursTitle: "Horario", callSub: "Llama para ordenar",
-    faqEyebrow: "Preguntas", faqTitle: "Lo que debes saber",
-    q1: "¿Puedo ordenar en línea?", a1: "Sí. Ordena en línea para recoger o a domicilio, o llama al (972) 528-8570.",
-    q2: "¿Hasta qué hora abren?", a2: "Hasta la 1 AM de lunes a jueves y hasta las 2 AM los viernes y sábados.",
-    q3: "¿Tienen opciones vegetarianas?", a3: "Sí: hummus, tabulé, fattoush, ensalada árabe, sopa de lentejas, falafel y halloumi frito.",
-    q4: "¿Pueden atender a un grupo?", a4: "El Banquete Familiar es para hasta cinco personas, y el Plato Combinado para dos.",
-    ctaTitle: "¿Con hambre? <span>Seguimos abiertos.</span>", ctaOrder2: "Ordenar en línea", barOrder: "Ordenar", barCall: "Llamar"
+  window.PAGE_ES = {
+    __title: "Sultan Café | Parrilla mediterránea y hookah lounge en Richardson, TX",
+    __desc: "Sultan Café: parrilla mediterránea y hookah lounge en el corazón de Richardson, TX. Shish tawook, chuletas de cordero, parrillada mixta, shawarma, hummus y kunafa. Abierto hasta tarde.",
+    welcome: "Bienvenido a Sultan",
+    heroTitle: "Un sabor de <span class=\"gold\">Medio Oriente</span> en el corazón de Richardson",
+    heroLead: "Cordero a la parrilla, shish tawook y kufta, hummus cremoso y kunafa caliente, servidos hasta tarde en un lounge hecho para quedarse.",
+    ctaOrder: "Ordena para recoger o a domicilio", ctaMenu: "Ver el menú",
+    f1: "Más de 425 reseñas", f2: "Abierto pasada la medianoche", f3: "Banquete para cinco",
+    altHummus: "Hummus con carne especiada y piñones tostados",
+    seal: "<b>Parrilla</b>hasta<br>tarde",
+    sigEyebrow: "Favoritos de la casa", sigTitle: "De la parrilla del <span class=\"gold\">Sultán</span>",
+    sigLead: "Seis platillos por los que nuestros clientes regresan. Los platos fuertes incluyen dos guarniciones a elegir.",
+    d1t: "Hummus", d1p: "Suave, cremoso y hecho como debe ser. El primero que preguntan nuestros invitados.",
+    d2t: "Shish Tawook", d2p: "Pechuga de pollo a la parrilla con aromáticas especias indias y salsa.",
+    d3t: "Chuletas de cordero", d3p: "A la parrilla con una mezcla especial de especias turcas, con arroz y papas.",
+    d4t: "Parrillada mixta", d4p: "Un poco de todo de la parrilla, para cuando no puedes decidir.",
+    d5t: "Kufta Kebab", d5p: "Carne molida sazonada con especias especiales de Alepo, recién salida del fuego.",
+    d6t: "Kunafa", d6p: "Caliente, dorada y dulce. La mejor manera de terminar la noche.",
+    fullMenu: "Ver el menú completo",
+    feastEyebrow: "Trae a la familia", feastTitle: "El Banquete <span class=\"gold\">Familiar</span>",
+    feastLead: "Un gran festín para cinco, ideal para cumpleaños, noches de partido y mucho apetito.",
+    feastServes: "para 5", feastInc: "En el platón",
+    fi1: "Cordero a la parrilla", fi2: "Kofta", fi3: "Shish tawook", fi4: "Hummus", fi5: "Baba ganoush", fi6: "Fattoush",
+    comboT: "Plato Combinado para dos", comboS: "· los mismos favoritos, para dos", feastBtn: "Ordena el banquete",
+    loungeT: "El hookah lounge", loungeP: "Sultan es parrilla y hookah lounge en uno. Acomódate después de cenar, quédate a platicar y sigue la noche hasta pasada la medianoche.",
+    loungeNote: "Abierto hasta las 12:30 AM",
+    cateringT: "Catering y eventos", cateringP: "Comidas de oficina, reuniones familiares y celebraciones. Lleva los sabores de la parrilla del Sultán a tu mesa.",
+    cateringBtn: "Pregunta por catering",
+    iVisit: "Visítanos", iHours: "Horario", iHoursP: "Todos los días · 11:30 AM – 12:30 AM", iCall: "Llama u ordena", iOrder: "Ordenar en línea →",
+    bandScript: "Ahlan wa sahlan", bandTitle: "Tu mesa te espera", bandLead: "Ordena con anticipación para recoger o a domicilio, o ven y quédate un rato.",
+    bandOrder: "Ordenar en línea", bandVisit: "Planea tu visita"
   };
-  const EN = { title: document.title, desc: document.querySelector('meta[name="description"]').content };
-  document.querySelectorAll("[data-i18n]").forEach(el => { EN[el.dataset.i18n] = el.innerHTML; });
-
-  // Hours from listings: [open, close] where close past 24 means after midnight. Sunday isn't listed.
-  const HOURS = { 0: null, 1: [11, 25], 2: [11, 25], 3: [11, 25], 4: [11, 25], 5: [11, 26], 6: [11, 26] };
-  const DAYS = { en: ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], es: ["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"] };
-  const T = {
-    en: { call: "Call for hours", open: t => "Open now · until " + t, opens: t => "Opens today at " + t, shut: "Closed now", callToday: "Call for today's hours" },
-    es: { call: "Llama para el horario", open: t => "Abierto ahora · hasta las " + t, opens: t => "Abre hoy a las " + t, shut: "Cerrado ahora", callToday: "Llama para el horario de hoy" }
+  const DISHES = {
+    en: ["Shish Tawook", "Lamb Chops", "Mixed Grill", "Kufta Kebab", "Beef Shawarma", "Falafel", "Fattoush", "Baklava", "Kunafa", "Hookah Lounge"],
+    es: ["Shish Tawook", "Chuletas de cordero", "Parrillada mixta", "Kufta Kebab", "Shawarma de res", "Falafel", "Fattoush", "Baklava", "Kunafa", "Hookah Lounge"]
   };
-  const fmt = h => { const hr = Math.floor(h) % 24; return (hr % 12 || 12) + ":00 " + (hr < 12 ? "AM" : "PM"); };
-  const now = new Date(new Date().toLocaleString("en-US", { timeZone: "America/Chicago" }));
-  const today = now.getDay(), hour = now.getHours() + now.getMinutes() / 60;
-  function renderHours(l) {
-    document.getElementById("hours").innerHTML = [1,2,3,4,5,6,0].map(d => { const h = HOURS[d];
-      return `<tr${d === today ? ' class="today"' : ""}><td>${DAYS[l][d]}</td><td>${h ? fmt(h[0]) + " – " + fmt(h[1]) : T[l].call}</td></tr>`; }).join("");
-    // still open from last night's late close?
-    const y = HOURS[(today + 6) % 7], h = HOURS[today];
-    let text, open = false;
-    if (y && hour < y[1] - 24) { open = true; text = T[l].open(fmt(y[1])); }
-    else if (!h) text = T[l].callToday;
-    else if (hour >= h[0]) { open = true; text = T[l].open(fmt(h[1])); }
-    else text = T[l].opens(fmt(h[0]));
-    document.getElementById("status").classList.toggle("open", open);
-    document.getElementById("status-text").textContent = text;
+  function marquee(l) {
+    const row = DISHES[l].map(d => `<span>${d}</span>`).join("");
+    document.getElementById("marquee").innerHTML = row + row;
   }
-
-  let lang = "en";
-  const arch = document.getElementById("archbtn");
-  function setLang(l) {
-    lang = l;
-    const d = l === "es" ? ES : EN;
-    document.documentElement.lang = l; document.title = d.title;
-    document.querySelector('meta[name="description"]').content = d.desc;
-    document.querySelectorAll("[data-i18n]").forEach(el => { if (d[el.dataset.i18n] !== undefined) el.innerHTML = d[el.dataset.i18n]; });
-    arch.classList.toggle("es", l === "es");
-    arch.setAttribute("aria-label", l === "es" ? "Switch to English" : "Cambiar a español");
-    document.getElementById("map").src = "https://maps.google.com/maps?q=201+S+Greenville+Ave+211,+Richardson,+TX+75081&z=15&output=embed&hl=" + l;
-    renderHours(l);
-    try { localStorage.setItem("lang", l); } catch (e) {}
-  }
-  arch.addEventListener("click", () => setLang(lang === "es" ? "en" : "es"));
-  let init = new URLSearchParams(location.search).get("lang");
-  if (init !== "en" && init !== "es") { try { init = localStorage.getItem("lang"); } catch (e) { init = null; } }
-  if (init !== "en" && init !== "es") init = (navigator.language || "").toLowerCase().startsWith("es") ? "es" : "en";
-  setLang(init);
-
-  const root = document.documentElement, star = document.getElementById("star");
-  const sync = () => star.setAttribute("aria-pressed", root.classList.contains("dark"));
-  sync();
-  function apply(t) { root.setAttribute("data-theme", t); root.classList.toggle("dark", t === "dark"); sync(); try { localStorage.setItem("theme", t); } catch (e) {} }
-  star.addEventListener("click", () => {
-    const next = root.classList.contains("dark") ? "light" : "dark";
-    if (!document.startViewTransition || matchMedia("(prefers-reduced-motion: reduce)").matches) return apply(next);
-    document.startViewTransition(() => apply(next));
-  });
-  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", e => { if (!root.hasAttribute("data-theme")) { root.classList.toggle("dark", e.matches); sync(); } });
-  document.getElementById("yr").textContent = new Date().getFullYear();
+  document.addEventListener("langchange", e => marquee(e.detail));
+</script>
+<script src="site.js"></script>
+<script>
+  marquee(window.SULTAN.lang());
+  // alt text i18n for the hero photo
+  (function () {
+    const img = document.querySelector('[data-i18n-alt="altHummus"]'), en = img.alt;
+    const set = l => { img.alt = l === "es" ? PAGE_ES.altHummus : en; };
+    set(window.SULTAN.lang());
+    document.addEventListener("langchange", e => set(e.detail));
+  })();
 </script>
 </body>
 </html>
