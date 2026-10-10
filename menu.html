@@ -10,10 +10,10 @@
 <script>(function(){var t=null;try{t=localStorage.getItem("theme")}catch(e){}if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);if(t?t==="dark":!matchMedia("(prefers-color-scheme: light)").matches)document.documentElement.classList.add("dark");})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Pinyon+Script&family=Urbanist:wght@400;500;600;700&family=Reem+Kufi:wght@400;500;600&family=Tajawal:wght@400;500;700&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&family=Reem+Kufi:wght@400;500;600&family=Tajawal:wght@400;500;700&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <style>
-  .tabs { position: sticky; top: 80px; z-index: 20; background: var(--header); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); transition: background-color .4s; }
+  .tabs { position: sticky; top: 92px; z-index: 20; background: var(--header); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); transition: background-color .4s; }
   .tabs .wrap { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding-top: 12px; padding-bottom: 12px; }
   .tabs .wrap::-webkit-scrollbar { display: none; }
   .tabs a { flex: none; text-decoration: none; font: 600 12.5px/1 var(--body); letter-spacing: .16em; text-transform: uppercase; color: var(--soft); padding: 11px 16px; border-radius: 999px; border: 1px solid transparent; transition: all .25s; }
@@ -44,7 +44,7 @@
 
   .order-cta { margin: 70px 0 110px; }
   @media (max-width: 860px) { .items, .family { grid-template-columns: 1fr; } }
-  @media (max-width: 600px) { .tabs { top: 80px; } .fam { padding: 28px 22px; } }
+  @media (max-width: 600px) { .tabs { top: 88px; } .fam { padding: 28px 22px; } }
   [dir="rtl"] .item p { max-width: none; }
 </style>
 </head>

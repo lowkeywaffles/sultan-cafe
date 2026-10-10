@@ -71,7 +71,7 @@
       <div class="foot-grid">
         <div><img src="images/logo.png" alt="Sultan Café" width="330" height="250"><p>${L.tag}</p><a href="${FB}" target="_blank" rel="noopener">Facebook · @sultancafetexas</a></div>
         <div><h4>${L.visit}</h4><a href="${MAPS}" target="_blank" rel="noopener"><bdi>201 S Greenville Ave, Suite 211</bdi><br><bdi>Richardson, TX 75081</bdi></a></div>
-        <div><h4>${L.hoursH}</h4><p>${L.daily}<br>${fmt(HOURS[0], l)} – ${fmt(HOURS[1], l)}</p><p class="status" data-status><i></i><span></span></p></div>
+        <div><h4>${L.hoursH}</h4><p>${L.daily}<br>${fmt(HOURS[0], l)} - ${fmt(HOURS[1], l)}</p><p class="status" data-status><i></i><span></span></p></div>
         <div><h4>${L.reach}</h4><a href="${TEL}">${ph}</a><a href="mailto:${EMAIL}"><bdi>${EMAIL}</bdi></a><a href="${ORDER}" target="_blank" rel="noopener">${L.order}</a></div>
       </div>
       <div class="foot-base"><span>© ${new Date().getFullYear()} Sultan Café. ${L.rights}</span><span><bdi>201 S Greenville Ave #211 · Richardson, TX</bdi></span></div>
