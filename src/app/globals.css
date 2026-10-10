@@ -1,0 +1,92 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Sultan Café: black lacquer and one gold. Light is warm ivory with deep gold. */
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--ink);
+  --color-border: var(--line);
+  --color-bg: var(--bg);
+  --color-bg2: var(--bg-2);
+  --color-panel: var(--panel);
+  --color-panel2: var(--panel-2);
+  --color-ink: var(--ink);
+  --color-soft: var(--soft);
+  --color-faint: var(--faint);
+  --color-line: var(--line);
+  --color-line2: var(--line-2);
+  --color-gold: var(--gold-text);
+  --color-tint: var(--tint);
+  --font-display: var(--font-cormorant), Georgia, serif;
+  --font-sans: var(--font-manrope), system-ui, sans-serif;
+  --ease-silk: cubic-bezier(.32, .72, 0, 1);
+  --ease-spring: cubic-bezier(.34, 1.4, .64, 1);
+  --animate-marquee: marquee var(--duration) infinite linear;
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(calc(-100% - var(--gap))); } }
+}
+
+:root {
+  --bg: #f4eee3; --bg-2: #ece4d5; --panel: #fbf7ef; --panel-2: #f1e9da;
+  --ink: #1d160c; --soft: #6a5d49; --faint: #998b73;
+  --line: rgba(130, 94, 26, .16); --line-2: rgba(130, 94, 26, .34);
+  --gold-text: #8a6315; --tint: rgba(130, 94, 26, .07);
+  --glass: rgba(250, 245, 236, .72); --hi: rgba(255, 255, 255, .7); --shadow: rgba(70, 48, 12, .18);
+  --map: none;
+}
+.dark {
+  --bg: #0d0b08; --bg-2: #13100b; --panel: #18140e; --panel-2: #211b12;
+  --ink: #f3e9d4; --soft: #a99c84; --faint: #6f6553;
+  --line: rgba(214, 171, 84, .16); --line-2: rgba(214, 171, 84, .32);
+  --gold-text: #dcb465; --tint: rgba(217, 174, 88, .06);
+  --glass: rgba(20, 16, 11, .64); --hi: rgba(255, 236, 196, .08); --shadow: rgba(4, 3, 1, .6);
+  --map: invert(.9) hue-rotate(180deg) saturate(.35) brightness(.85);
+  color-scheme: dark;
+}
+
+@layer base {
+  html { overflow-x: clip; }
+  body { background: var(--bg); color: var(--ink); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; transition: background-color .6s var(--ease-silk), color .6s var(--ease-silk); }
+  h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 500; letter-spacing: -.015em; line-height: 1.02; text-wrap: balance; }
+  p { text-wrap: pretty; }
+  ::selection { background: #d9ae58; color: #1a1207; }
+  :focus-visible { outline: 2px solid #d9ae58; outline-offset: 3px; border-radius: 12px; }
+  bdi { unicode-bidi: isolate; }
+}
+
+/* film grain, fixed so it never repaints on scroll */
+body::after { content: ""; position: fixed; inset: 0; z-index: 60; pointer-events: none; opacity: .05; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+
+/* the house pattern: an 8-point star lattice */
+.lattice { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23d9ae58' stroke-opacity='.14' stroke-width='.8'%3E%3Cpath d='M32 10l6.4 15.6L54 32l-15.6 6.4L32 54l-6.4-15.6L10 32l15.6-6.4z'/%3E%3Cpath d='M16.4 16.4L32 22.8l15.6-6.4-6.4 15.6 6.4 15.6L32 41.2l-15.6 6.4 6.4-15.6z'/%3E%3C/g%3E%3C/svg%3E"); }
+.fade-mask { mask-image: radial-gradient(ellipse at center, #000 5%, transparent 70%); }
+
+/* the one gold: an italic, never gradient text */
+.gold { color: var(--gold-text); font-style: italic; }
+.glass { background: var(--glass); backdrop-filter: blur(22px) saturate(1.4); -webkit-backdrop-filter: blur(22px) saturate(1.4); }
+/* double bezel: a plate set in a tray */
+.bezel { padding: 7px; background: var(--tint); box-shadow: inset 0 0 0 1px var(--line); }
+.bezel-core { background: var(--panel); box-shadow: inset 0 1px 0 var(--hi); }
+.gold-fill { background: linear-gradient(140deg, #f1d68f 0%, #d9ae58 45%, #b8892f 100%); color: #1a1207; box-shadow: inset 0 1px 0 rgba(255,255,255,.45), 0 18px 40px -20px rgba(217,174,88,.65); }
+
+/* Theme change: an arch-shaped doorway opens over the page */
+::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+::view-transition-new(root) { animation: archopen .9s cubic-bezier(.32, .72, 0, 1); }
+@keyframes archopen { from { clip-path: inset(100% 42% 0 42% round 50% 50% 0 0); } to { clip-path: inset(0 0 0 0 round 0); } }
+
+/* Arabic: no italics, no tracking, its own type */
+:root[lang="ar"] body { font-family: var(--font-tajawal), system-ui, sans-serif; line-height: 1.85; }
+:root[lang="ar"] h1, :root[lang="ar"] h2, :root[lang="ar"] h3, :root[lang="ar"] h4, :root[lang="ar"] .font-display { font-family: var(--font-kufi), serif; letter-spacing: 0; line-height: 1.3; }
+:root[lang="ar"] .gold, :root[lang="ar"] .italic { font-style: normal; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+@media (prefers-reduced-transparency: reduce) { .glass { background: var(--bg); backdrop-filter: none; } }
+
+/* reveal: added by JS only, so content is never hidden without it */
+.rv { opacity: 0; transform: translateY(40px); filter: blur(10px); transition-property: opacity, transform, filter; transition-duration: 1.1s; transition-timing-function: cubic-bezier(.32, .72, 0, 1); }
+.rv.in { opacity: 1; transform: none; filter: none; }
+@media (prefers-reduced-motion: reduce) { .rv { opacity: 1; transform: none; filter: none; } }
